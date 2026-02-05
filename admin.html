@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админка — заявки</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container" style="padding:24px 0;">
+    <h1 style="margin:0 0 10px;">Админка заявок</h1>
+    <p style="margin:0 0 18px;color:rgba(255,255,255,.7)">
+      Заявки сохраняются в браузере (localStorage).
+    </p>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+      <button class="btn btn--ghost" onclick="clearOrders()">Очистить заявки</button>
+      <a class="btn btn--ghost" href="index.html">На сайт</a>
+    </div>
+
+    <div class="cardLux" style="overflow:auto;">
+      <table border="0" cellpadding="12" style="width:100%;border-collapse:collapse;color:rgba(255,255,255,.9);min-width:760px;">
+        <thead>
+          <tr style="color:rgba(255,255,255,.7);text-align:left;border-bottom:1px solid rgba(255,255,255,.12)">
+            <th>Когда</th><th>Имя</th><th>Телефон</th><th>Возраст</th><th>Дата</th><th>Комментарий</th>
+          </tr>
+        </thead>
+        <tbody id="list"></tbody>
+      </table>
+    </div>
+  </div>
+
+<script>
+  const orders = JSON.parse(localStorage.getItem("orders") || "[]")
+    .sort((a,b)=> (b.createdAt||"").localeCompare(a.createdAt||""));
+
+  const tbody = document.getElementById("list");
+
+  if(!orders.length){
+    tbody.innerHTML = `<tr><td colspan="6" style="padding:16px;color:rgba(255,255,255,.7)">Пока заявок нет.</td></tr>`;
+  } else {
+    orders.forEach(o=>{
+      const when = o.createdAt ? new Date(o.createdAt).toLocaleString("ru-RU") : "";
+      tbody.innerHTML += `
+        <tr style="border-bottom:1px solid rgba(255,255,255,.08)">
+          <td>${when}</td>
+          <td>${o.name||""}</td>
+          <td>${o.phone||""}</td>
+          <td>${o.age||""}</td>
+          <td>${o.date||""}</td>
+          <td>${o.comment||""}</td>
+        </tr>
+      `;
+    });
+  }
+
+  function clearOrders(){
+    if(confirm("Точно очистить все заявки?")){
+      localStorage.removeItem("orders");
+      location.reload();
+    }
+  }
+</script>
+</body>
+</html>

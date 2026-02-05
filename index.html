@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Аниматоры в Аксу — Премиум детские праздники</title>
+  <meta name="description" content="Аниматоры в Аксу: персонажи, квесты, пена-шоу. Безопасно, красиво, под ключ. Рассчитайте стоимость за 1 минуту.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="bg-glow"></div>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__mark">★</div>
+        <div class="brand__text">
+          <div class="brand__name">Аниматоры Аксу</div>
+          <div class="brand__tag">праздники 3–12 лет</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#services">Услуги</a>
+        <a href="#characters">Персонажи</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#form">Заявка</a>
+      </nav>
+
+      <div class="lang">
+        <button class="chip" onclick="setLang('ru')">RU</button>
+        <button class="chip" onclick="setLang('kz')">KZ</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <div class="pill" id="heroPill">Аксу · выезд по городу</div>
+          <h1 id="heroTitle">Праздник, который запомнят</h1>
+          <p id="heroText">
+            Любимые герои, безопасные игры и премиум-сервис без переплат.
+            Вы отдыхаете — мы делаем вау-эффект.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#form">Забронировать дату</a>
+            <a class="btn btn--ghost" href="#calc">Рассчитать стоимость</a>
+          </div>
+
+          <div class="hero__badges">
+            <div class="badge">🛡️ Безопасно</div>
+            <div class="badge">🎭 Сценарии под возраст</div>
+            <div class="badge">⭐ Надёжно и вовремя</div>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="hero__cardTitle">Быстрый заказ</div>
+          <div class="hero__cardText">Оставьте номер — напишем в WhatsApp за пару минут.</div>
+          <form class="miniForm" onsubmit="quickLead(event)">
+            <input id="qPhone" type="tel" placeholder="Телефон WhatsApp" required>
+            <button class="btn btn--primary btn--block" type="submit">Хочу праздник</button>
+            <div class="miniHint">Никакого спама. Только по делу 😊</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container trust__grid">
+        <div class="trustCard">
+          <div class="trustCard__icon">🎈</div>
+          <div class="trustCard__title">Аккуратно и безопасно</div>
+          <div class="trustCard__text">Игры без риска, реквизит чистый и проверенный.</div>
+        </div>
+        <div class="trustCard">
+          <div class="trustCard__icon">🧸</div>
+          <div class="trustCard__title">Под возраст ребёнка</div>
+          <div class="trustCard__text">3–5, 6–9, 10–12 — разные темпы и сценарии.</div>
+        </div>
+        <div class="trustCard">
+          <div class="trustCard__icon">✨</div>
+          <div class="trustCard__title">Уникальные сценарии</div>
+          <div class="trustCard__text">Квесты, сюжеты, интерактив — не “как у всех”.</div>
+        </div>
+        <div class="trustCard">
+          <div class="trustCard__icon">💎</div>
+          <div class="trustCard__title">Премиум без переплат</div>
+          <div class="trustCard__text">Красиво, качественно и честно по цене.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Услуги</h2>
+          <p>Выбирайте формат — мы соберём программу под ваш праздник.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="cardLux">
+            <div class="cardLux__title">Детские праздники</div>
+            <div class="cardLux__text">День рождения “под ключ”: игры, музыка, конкурсы.</div>
+          </div>
+          <div class="cardLux">
+            <div class="cardLux__title">Пена-шоу</div>
+            <div class="cardLux__text">Вау-эффект и море смеха. Сертифицированная пена.</div>
+          </div>
+          <div class="cardLux">
+            <div class="cardLux__title">Ростовые куклы</div>
+            <div class="cardLux__text">Объятия, фотки, встреча героя — максимум восторга.</div>
+          </div>
+          <div class="cardLux">
+            <div class="cardLux__title">Тематические квесты</div>
+            <div class="cardLux__text">Задания, сюжет, миссия — дети вовлечены на 100%.</div>
+          </div>
+          <div class="cardLux">
+            <div class="cardLux__title">Персонажи</div>
+            <div class="cardLux__text">Куроми, Лабубу, принцессы, супергерои и другие.</div>
+          </div>
+          <div class="cardLux">
+            <div class="cardLux__title">Премиум-сервис</div>
+            <div class="cardLux__text">Пунктуальность, аккуратность, приятная коммуникация.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПЕРСОНАЖИ (готовый люкс-блок) -->
+    <section id="characters" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Персонажи</h2>
+          <p>Выберите любимого героя — фото одинакового размера, всё выглядит аккуратно и “дорого”.</p>
+        </div>
+
+        <div class="filters">
+          <button class="chip chip--active" onclick="filterChar('all', this)">Все</button>
+          <button class="chip" onclick="filterChar('girls', this)">Для девочек</button>
+          <button class="chip" onclick="filterChar('boys', this)">Для мальчиков</button>
+          <button class="chip" onclick="filterChar('kids', this)">Универсальные</button>
+        </div>
+
+        <div class="gridChars">
+          <!-- GIRLS -->
+          <div class="charCard girls">
+            <img src="assets/characters/kuromi.jpg" loading="lazy" alt="Куроми">
+            <div class="charCard__name">Куроми</div>
+          </div>
+          <div class="charCard kids">
+            <img src="assets/characters/labubu.jpg" loading="lazy" alt="Лабубу">
+            <div class="charCard__name">Лабубу</div>
+          </div>
+          <div class="charCard girls">
+            <img src="assets/characters/ladybug.jpg" loading="lazy" alt="Леди Баг">
+            <div class="charCard__name">Леди Баг</div>
+          </div>
+          <div class="charCard boys">
+            <img src="assets/characters/catnoir.jpg" loading="lazy" alt="Супер Кот">
+            <div class="charCard__name">Супер Кот</div>
+          </div>
+
+          <div class="charCard girls">
+            <img src="assets/characters/elsa.jpg" loading="lazy" alt="Эльза">
+            <div class="charCard__name">Эльза</div>
+          </div>
+          <div class="charCard girls">
+            <img src="assets/characters/anna.jpg" loading="lazy" alt="Анна">
+            <div class="charCard__name">Анна</div>
+          </div>
+          <div class="charCard girls">
+            <img src="assets/characters/ariel.jpg" loading="lazy" alt="Принцесса Ариэль">
+            <div class="charCard__name">Принцесса Ариэль</div>
+          </div>
+
+          <div class="charCard girls">
+            <img src="assets/characters/barbie.jpg" loading="lazy" alt="Барби">
+            <div class="charCard__name">Барби</div>
+          </div>
+          <div class="charCard girls">
+            <img src="assets/characters/lol.jpg" loading="lazy" alt="Кукла LOL">
+            <div class="charCard__name">Кукла LOL</div>
+          </div>
+          <div class="charCard girls">
+            <img src="assets/characters/minnie.jpg" loading="lazy" alt="Минни Маус">
+            <div class="charCard__name">Минни Маус</div>
+          </div>
+
+          <!-- BOYS -->
+          <div class="charCard boys">
+            <img src="assets/characters/sonic.jpg" loading="lazy" alt="Соник">
+            <div class="charCard__name">Соник</div>
+          </div>
+          <div class="charCard boys">
+            <img src="assets/characters/spiderman.jpg" loading="lazy" alt="Человек-паук">
+            <div class="charCard__name">Человек-паук</div>
+          </div>
+
+          <!-- KIDS -->
+          <div class="charCard kids">
+            <img src="assets/characters/threecats_karamelka.jpg" loading="lazy" alt="Три кота — Карамелька">
+            <div class="charCard__name">Три кота — Карамелька</div>
+          </div>
+          <div class="charCard kids">
+            <img src="assets/characters/threecats_kompot.jpg" loading="lazy" alt="Три кота — Компот">
+            <div class="charCard__name">Три кота — Компот</div>
+          </div>
+
+          <div class="charCard kids">
+            <img src="assets/characters/pawpatrol_rider.jpg" loading="lazy" alt="Щенячий патруль — Гонщик">
+            <div class="charCard__name">Щенячий патруль — Гонщик</div>
+          </div>
+          <div class="charCard kids">
+            <img src="assets/characters/pawpatrol_sky.jpg" loading="lazy" alt="Щенячий патруль — Скай">
+            <div class="charCard__name">Щенячий патруль — Скай</div>
+          </div>
+
+          <div class="charCard kids">
+            <img src="assets/characters/barboskiny_roza.jpg" loading="lazy" alt="Барбоскины — Роза">
+            <div class="charCard__name">Барбоскины — Роза</div>
+          </div>
+          <div class="charCard kids">
+            <img src="assets/characters/barboskiny_liza.jpg" loading="lazy" alt="Барбоскины — Лиза">
+            <div class="charCard__name">Барбоскины — Лиза</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calc" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Калькулятор стоимости</h2>
+          <p>Примерная цена, чтобы быстро понять бюджет.</p>
+        </div>
+
+        <div class="calc">
+          <label class="field">
+            <span>Количество детей</span>
+            <input type="number" id="kids" min="1" value="5">
+          </label>
+
+          <label class="field">
+            <span>Длительность</span>
+            <select id="time">
+              <option value="5000">30 минут</option>
+              <option value="8000">60 минут</option>
+              <option value="12000">90 минут</option>
+            </select>
+          </label>
+
+          <label class="field field--inline">
+            <input type="checkbox" id="foam">
+            <span>Пена-шоу (+4000 ₸)</span>
+          </label>
+
+          <label class="field">
+            <span>Персонаж</span>
+            <select id="character">
+              <option value="0">Без персонажа</option>
+              <option value="3000">Популярный герой (+3000 ₸)</option>
+              <option value="5000">Премиум герой (+5000 ₸)</option>
+            </select>
+          </label>
+
+          <button class="btn btn--primary btn--block" onclick="calculate()">Посчитать</button>
+          <div class="calc__result" id="result">Итого: —</div>
+          <a class="btn btn--ghost btn--block" href="#form">Оставить заявку</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="form" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Оставить заявку</h2>
+          <p>Мы уточним детали и предложим лучший сценарий под возраст и формат.</p>
+        </div>
+
+        <form class="formLux" onsubmit="sendForm(event)">
+          <div class="formGrid">
+            <label class="field">
+              <span>Ваше имя</span>
+              <input id="name" placeholder="Например, Алия" required>
+            </label>
+
+            <label class="field">
+              <span>Телефон</span>
+              <input id="phone" type="tel" placeholder="+7 ..." required>
+            </label>
+
+            <label class="field">
+              <span>Возраст ребёнка</span>
+              <input id="age" type="number" min="3" max="12" placeholder="6">
+            </label>
+
+            <label class="field">
+              <span>Дата</span>
+              <input id="date" type="date">
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Комментарий</span>
+            <textarea id="comment" rows="4" placeholder="Персонаж, адрес, сколько детей, пожелания…"></textarea>
+          </label>
+
+          <button class="btn btn--primary btn--block" type="submit">Отправить заявку</button>
+          <div class="smallNote">Заявки сохраняются в админке (в браузере).</div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>© Аниматоры Аксу</div>
+        <div class="footer__links">
+          <a href="admin.html" title="внутренняя страница">Админка</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Плавающие кнопки (замени на свои) -->
+  <a class="fab fab--wa" href="https://wa.me/77000000000" target="_blank" aria-label="WhatsApp">💬</a>
+  <a class="fab fab--ig" href="https://instagram.com/ВАШ_АККАУНТ" target="_blank" aria-label="Instagram">📸</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
