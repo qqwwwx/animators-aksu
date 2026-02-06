@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Аниматоры в Аксу — Премиум детские праздники</title>
   <meta name="description" content="Аниматоры в Аксу: персонажи, квесты, пена-шоу. Безопасно, красиво, под ключ. Рассчитайте стоимость за 1 минуту.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body>
@@ -16,320 +16,1037 @@
       <div class="brand">
         <div class="brand__mark">★</div>
         <div class="brand__text">
-          <div class="brand__name">Аниматоры Аксу</div>
-          <div class="brand__tag">праздники 3–12 лет</div>
+          <div class="brand__name" data-i18n="brand.name">Аниматоры Аксу</div>
+          <div class="brand__tag" data-i18n="brand.tag">праздники 3–12 лет</div>
         </div>
       </div>
 
       <nav class="nav">
-        <a href="#services">Услуги</a>
-        <a href="#characters">Персонажи</a>
-        <a href="#calc">Калькулятор</a>
-        <a href="#form">Заявка</a>
+        <a href="#services" data-i18n="nav.services">Услуги</a>
+        <a href="#pricing" data-i18n="nav.pricing">Пакеты</a>
+        <a href="#characters" data-i18n="nav.characters">Персонажи</a>
+        <a href="#calc" data-i18n="nav.calc">Калькулятор</a>
+        <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#form" data-i18n="nav.form">Заявка</a>
       </nav>
 
       <div class="lang">
-        <button class="chip" onclick="setLang('ru')">RU</button>
-        <button class="chip" onclick="setLang('kz')">KZ</button>
+        <button class="chip chip--active" id="btnRU" onclick="setLang('ru')">RU</button>
+        <button class="chip" id="btnKZ" onclick="setLang('kz')">KZ</button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero section hero--premium" style="padding-top:24px">
       <div class="container hero__grid">
         <div class="hero__text">
-          <div class="pill" id="heroPill">Аксу · выезд по городу</div>
-          <h1 id="heroTitle">Праздник, который запомнят</h1>
-          <p id="heroText">
+          <div class="pill" data-i18n="hero.pill">Аксу · выезд по городу</div>
+          <h1 data-i18n="hero.title">Праздник, который запомнят</h1>
+          <p data-i18n="hero.text">
             Любимые герои, безопасные игры и премиум-сервис без переплат.
             Вы отдыхаете — мы делаем вау-эффект.
           </p>
 
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#form">Забронировать дату</a>
-            <a class="btn btn--ghost" href="#calc">Рассчитать стоимость</a>
+            <a class="btn btn--primary" href="#form" data-i18n="hero.ctaPrimary">Забронировать дату</a>
+            <a class="btn btn--ghost" href="#calc" data-i18n="hero.ctaSecondary">Рассчитать стоимость</a>
           </div>
 
           <div class="hero__badges">
-            <div class="badge">🛡️ Безопасно</div>
-            <div class="badge">🎭 Сценарии под возраст</div>
-            <div class="badge">⭐ Надёжно и вовремя</div>
+            <div class="badge"><span class="icon">🛡️</span> <span data-i18n="hero.badge1">Безопасно</span></div>
+            <div class="badge"><span class="icon">🎭</span> <span data-i18n="hero.badge2">Сценарии под возраст</span></div>
+            <div class="badge"><span class="icon">⭐</span> <span data-i18n="hero.badge3">Надёжно и вовремя</span></div>
+          </div>
+
+          <div class="miniStats">
+            <div class="miniStat">
+              <div class="miniStat__top">✓</div>
+              <div class="miniStat__text" data-i18n="hero.stat1">Чистый реквизит</div>
+            </div>
+            <div class="miniStat">
+              <div class="miniStat__top">✓</div>
+              <div class="miniStat__text" data-i18n="hero.stat2">Пунктуальность</div>
+            </div>
+            <div class="miniStat">
+              <div class="miniStat__top">✓</div>
+              <div class="miniStat__text" data-i18n="hero.stat3">Фотогенично</div>
+            </div>
           </div>
         </div>
 
         <div class="hero__card">
-          <div class="hero__cardTitle">Быстрый заказ</div>
-          <div class="hero__cardText">Оставьте номер — напишем в WhatsApp за пару минут.</div>
+          <div class="hero__cardTitle" data-i18n="hero.fastTitle">Быстрый заказ</div>
+          <div class="hero__cardText" data-i18n="hero.fastText">Оставьте номер — напишем в WhatsApp за пару минут.</div>
           <form class="miniForm" onsubmit="quickLead(event)">
-            <input id="qPhone" type="tel" placeholder="Телефон WhatsApp" required>
-            <button class="btn btn--primary btn--block" type="submit">Хочу праздник</button>
-            <div class="miniHint">Никакого спама. Только по делу 😊</div>
+            <input id="qPhone" type="tel" data-i18n-placeholder="hero.fastPlaceholder" placeholder="Телефон WhatsApp" required>
+            <button class="btn btn--primary btn--block" type="submit" data-i18n="hero.fastButton">Хочу праздник</button>
+            <div class="miniHint" data-i18n="hero.fastHint">Никакого спама. Только по делу 😊</div>
           </form>
         </div>
       </div>
     </section>
 
+    <!-- TRUST -->
     <section class="trust">
       <div class="container trust__grid">
         <div class="trustCard">
           <div class="trustCard__icon">🎈</div>
-          <div class="trustCard__title">Аккуратно и безопасно</div>
-          <div class="trustCard__text">Игры без риска, реквизит чистый и проверенный.</div>
+          <div class="trustCard__title" data-i18n="trust.1.title">Аккуратно и безопасно</div>
+          <div class="trustCard__text" data-i18n="trust.1.text">Игры без риска, реквизит чистый и проверенный.</div>
         </div>
         <div class="trustCard">
           <div class="trustCard__icon">🧸</div>
-          <div class="trustCard__title">Под возраст ребёнка</div>
-          <div class="trustCard__text">3–5, 6–9, 10–12 — разные темпы и сценарии.</div>
+          <div class="trustCard__title" data-i18n="trust.2.title">Под возраст ребёнка</div>
+          <div class="trustCard__text" data-i18n="trust.2.text">3–5, 6–9, 10–12 — разные темпы и сценарии.</div>
         </div>
         <div class="trustCard">
           <div class="trustCard__icon">✨</div>
-          <div class="trustCard__title">Уникальные сценарии</div>
-          <div class="trustCard__text">Квесты, сюжеты, интерактив — не “как у всех”.</div>
+          <div class="trustCard__title" data-i18n="trust.3.title">Уникальные сценарии</div>
+          <div class="trustCard__text" data-i18n="trust.3.text">Квесты, сюжеты, интерактив — не “как у всех”.</div>
         </div>
         <div class="trustCard">
           <div class="trustCard__icon">💎</div>
-          <div class="trustCard__title">Премиум без переплат</div>
-          <div class="trustCard__text">Красиво, качественно и честно по цене.</div>
+          <div class="trustCard__title" data-i18n="trust.4.title">Премиум без переплат</div>
+          <div class="trustCard__text" data-i18n="trust.4.text">Красиво, качественно и честно по цене.</div>
         </div>
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="section">
       <div class="container">
         <div class="sectionHead">
-          <h2>Услуги</h2>
-          <p>Выбирайте формат — мы соберём программу под ваш праздник.</p>
+          <h2 data-i18n="services.title">Услуги</h2>
+          <p data-i18n="services.subtitle">Выбирайте формат — мы соберём программу под ваш праздник.</p>
         </div>
 
         <div class="grid3">
           <div class="cardLux">
-            <div class="cardLux__title">Детские праздники</div>
-            <div class="cardLux__text">День рождения “под ключ”: игры, музыка, конкурсы.</div>
+            <div class="cardLux__title" data-i18n="services.1.title">Детские праздники</div>
+            <div class="cardLux__text" data-i18n="services.1.text">День рождения “под ключ”: игры, музыка, конкурсы.</div>
           </div>
           <div class="cardLux">
-            <div class="cardLux__title">Пена-шоу</div>
-            <div class="cardLux__text">Вау-эффект и море смеха. Сертифицированная пена.</div>
+            <div class="cardLux__title" data-i18n="services.2.title">Пена-шоу</div>
+            <div class="cardLux__text" data-i18n="services.2.text">Вау-эффект и море смеха. Сертифицированная пена.</div>
           </div>
           <div class="cardLux">
-            <div class="cardLux__title">Ростовые куклы</div>
-            <div class="cardLux__text">Объятия, фотки, встреча героя — максимум восторга.</div>
+            <div class="cardLux__title" data-i18n="services.3.title">Ростовые куклы</div>
+            <div class="cardLux__text" data-i18n="services.3.text">Объятия, фотки, встреча героя — максимум восторга.</div>
           </div>
           <div class="cardLux">
-            <div class="cardLux__title">Тематические квесты</div>
-            <div class="cardLux__text">Задания, сюжет, миссия — дети вовлечены на 100%.</div>
+            <div class="cardLux__title" data-i18n="services.4.title">Тематические квесты</div>
+            <div class="cardLux__text" data-i18n="services.4.text">Задания, сюжет, миссия — дети вовлечены на 100%.</div>
           </div>
           <div class="cardLux">
-            <div class="cardLux__title">Персонажи</div>
-            <div class="cardLux__text">Куроми, Лабубу, принцессы, супергерои и другие.</div>
+            <div class="cardLux__title" data-i18n="services.5.title">Персонажи</div>
+            <div class="cardLux__text" data-i18n="services.5.text">Куроми, Лабубу, принцессы, супергерои и другие.</div>
           </div>
           <div class="cardLux">
-            <div class="cardLux__title">Премиум-сервис</div>
-            <div class="cardLux__text">Пунктуальность, аккуратность, приятная коммуникация.</div>
+            <div class="cardLux__title" data-i18n="services.6.title">Премиум-сервис</div>
+            <div class="cardLux__text" data-i18n="services.6.text">Пунктуальность, аккуратность, приятная коммуникация.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ПЕРСОНАЖИ (готовый люкс-блок) -->
-    <section id="characters" class="section">
+    <section class="section" id="process">
+  <div class="container">
+    <div class="sectionHead">
+      <h2 data-i18n="process.title">Как проходит праздник</h2>
+      <p data-i18n="process.subtitle">Три шага — и у ребёнка праздник мечты, а у родителей спокойствие.</p>
+    </div>
+
+    <div class="stepsLux">
+      <article class="stepLux">
+        <div class="stepLux__icon">📞</div>
+        <div class="stepLux__content">
+          <div class="stepLux__title" data-i18n="process.s1.title">1) Быстро уточняем детали</div>
+          <div class="stepLux__text" data-i18n="process.s1.text">
+            Возраст, место, любимые герои, сколько детей — предложим лучший формат и сценарий.
+          </div>
+          <div class="stepLux__chips">
+            <span class="miniChip" data-i18n="process.s1.c1">5–10 минут</span>
+            <span class="miniChip" data-i18n="process.s1.c2">в WhatsApp</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="stepLux">
+        <div class="stepLux__icon">🎭</div>
+        <div class="stepLux__content">
+          <div class="stepLux__title" data-i18n="process.s2.title">2) Готовим сценарий “под вашего”</div>
+          <div class="stepLux__text" data-i18n="process.s2.text">
+            Сюжет, игры и темп — строго по возрасту. Реквизит чистый, музыка настроена заранее.
+          </div>
+          <div class="stepLux__chips">
+            <span class="miniChip" data-i18n="process.s2.c1">без хаоса</span>
+            <span class="miniChip" data-i18n="process.s2.c2">всё вовлекает</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="stepLux">
+        <div class="stepLux__icon">✨</div>
+        <div class="stepLux__content">
+          <div class="stepLux__title" data-i18n="process.s3.title">3) Проводим вау-праздник</div>
+          <div class="stepLux__text" data-i18n="process.s3.text">
+            Аниматор держит внимание, родители отдыхают. Много фото-моментов и улыбок.
+          </div>
+          <div class="stepLux__chips">
+            <span class="miniChip" data-i18n="process.s3.c1">пунктуально</span>
+            <span class="miniChip" data-i18n="process.s3.c2">аккуратно</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="ctaBarLux">
+      <div class="ctaBarLux__left">
+        <div class="ctaBarLux__title" data-i18n="process.ctaTitle">Хотите сценарий под ваш возраст?</div>
+        <div class="ctaBarLux__text" data-i18n="process.ctaText">Оставьте заявку — предложим 2–3 варианта программы.</div>
+      </div>
+      <div class="ctaBarLux__right">
+        <a class="btn btn--primary" href="#form" data-i18n="process.ctaBtn">Подобрать программу</a>
+        <a class="btn btn--ghost" href="#calc" data-i18n="process.ctaBtn2">Узнать стоимость</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
       <div class="container">
         <div class="sectionHead">
-          <h2>Персонажи</h2>
-          <p>Выберите любимого героя — фото одинакового размера, всё выглядит аккуратно и “дорого”.</p>
+          <h2 data-i18n="pricing.title">Пакеты</h2>
+          <p data-i18n="pricing.subtitle">Три понятных варианта — под разные форматы и бюджет. Можно собрать индивидуально.</p>
         </div>
 
-        <div class="filters">
-          <button class="chip chip--active" onclick="filterChar('all', this)">Все</button>
-          <button class="chip" onclick="filterChar('girls', this)">Для девочек</button>
-          <button class="chip" onclick="filterChar('boys', this)">Для мальчиков</button>
-          <button class="chip" onclick="filterChar('kids', this)">Универсальные</button>
-        </div>
-
-        <div class="gridChars">
-          <!-- GIRLS -->
-          <div class="charCard girls">
-            <img src="assets/characters/kuromi.jpg" loading="lazy" alt="Куроми">
-            <div class="charCard__name">Куроми</div>
-          </div>
-          <div class="charCard kids">
-            <img src="assets/characters/labubu.jpg" loading="lazy" alt="Лабубу">
-            <div class="charCard__name">Лабубу</div>
-          </div>
-          <div class="charCard girls">
-            <img src="assets/characters/ladybug.jpg" loading="lazy" alt="Леди Баг">
-            <div class="charCard__name">Леди Баг</div>
-          </div>
-          <div class="charCard boys">
-            <img src="assets/characters/catnoir.jpg" loading="lazy" alt="Супер Кот">
-            <div class="charCard__name">Супер Кот</div>
+        <div class="gridPricing">
+          <div class="priceCard">
+            <div class="priceTag" data-i18n="pricing.1.tag">Лёгкий старт</div>
+            <h3 class="priceTitle" data-i18n="pricing.1.title">Мини</h3>
+            <p class="priceText" data-i18n="pricing.1.text">Коротко, ярко — идеально для дома и малышей.</p>
+            <div class="priceValue" data-i18n="pricing.1.price">от 5 000 ₸</div>
+            <ul class="priceList">
+              <li data-i18n="pricing.1.li1">1 аниматор</li>
+              <li data-i18n="pricing.1.li2">Игры по возрасту</li>
+              <li data-i18n="pricing.1.li3">Музыка + реквизит</li>
+              <li data-i18n="pricing.1.li4">Поздравление именинника</li>
+            </ul>
+            <div style="margin-top:14px;">
+              <a class="btn btn--ghost btn--block" href="#form" onclick="prefillPackage('MINI')" data-i18n="pricing.1.btn">Выбрать Мини</a>
+            </div>
           </div>
 
-          <div class="charCard girls">
-            <img src="assets/characters/elsa.jpg" loading="lazy" alt="Эльза">
-            <div class="charCard__name">Эльза</div>
-          </div>
-          <div class="charCard girls">
-            <img src="assets/characters/anna.jpg" loading="lazy" alt="Анна">
-            <div class="charCard__name">Анна</div>
-          </div>
-          <div class="charCard girls">
-            <img src="assets/characters/ariel.jpg" loading="lazy" alt="Принцесса Ариэль">
-            <div class="charCard__name">Принцесса Ариэль</div>
-          </div>
-
-          <div class="charCard girls">
-            <img src="assets/characters/barbie.jpg" loading="lazy" alt="Барби">
-            <div class="charCard__name">Барби</div>
-          </div>
-          <div class="charCard girls">
-            <img src="assets/characters/lol.jpg" loading="lazy" alt="Кукла LOL">
-            <div class="charCard__name">Кукла LOL</div>
-          </div>
-          <div class="charCard girls">
-            <img src="assets/characters/minnie.jpg" loading="lazy" alt="Минни Маус">
-            <div class="charCard__name">Минни Маус</div>
+          <div class="priceCard priceCard--hot">
+            <div class="priceTag" data-i18n="pricing.2.tag">Самый популярный</div>
+            <h3 class="priceTitle" data-i18n="pricing.2.title">Классика</h3>
+            <p class="priceText" data-i18n="pricing.2.text">Полноценная программа с сюжетом и вовлечением.</p>
+            <div class="priceValue" data-i18n="pricing.2.price">от 8 000 ₸</div>
+            <ul class="priceList">
+              <li data-i18n="pricing.2.li1">Сюжетный сценарий</li>
+              <li data-i18n="pricing.2.li2">Конкурсы и активности</li>
+              <li data-i18n="pricing.2.li3">Тематический реквизит</li>
+              <li data-i18n="pricing.2.li4">Мини-квест</li>
+            </ul>
+            <div style="margin-top:14px;">
+              <a class="btn btn--primary btn--block" href="#form" onclick="prefillPackage('CLASSIC')" data-i18n="pricing.2.btn">Выбрать Классику</a>
+            </div>
           </div>
 
-          <!-- BOYS -->
-          <div class="charCard boys">
-            <img src="assets/characters/sonic.jpg" loading="lazy" alt="Соник">
-            <div class="charCard__name">Соник</div>
-          </div>
-          <div class="charCard boys">
-            <img src="assets/characters/spiderman.jpg" loading="lazy" alt="Человек-паук">
-            <div class="charCard__name">Человек-паук</div>
-          </div>
-
-          <!-- KIDS -->
-          <div class="charCard kids">
-            <img src="assets/characters/threecats_karamelka.jpg" loading="lazy" alt="Три кота — Карамелька">
-            <div class="charCard__name">Три кота — Карамелька</div>
-          </div>
-          <div class="charCard kids">
-            <img src="assets/characters/threecats_kompot.jpg" loading="lazy" alt="Три кота — Компот">
-            <div class="charCard__name">Три кота — Компот</div>
-          </div>
-
-          <div class="charCard kids">
-            <img src="assets/characters/pawpatrol_rider.jpg" loading="lazy" alt="Щенячий патруль — Гонщик">
-            <div class="charCard__name">Щенячий патруль — Гонщик</div>
-          </div>
-          <div class="charCard kids">
-            <img src="assets/characters/pawpatrol_sky.jpg" loading="lazy" alt="Щенячий патруль — Скай">
-            <div class="charCard__name">Щенячий патруль — Скай</div>
-          </div>
-
-          <div class="charCard kids">
-            <img src="assets/characters/barboskiny_roza.jpg" loading="lazy" alt="Барбоскины — Роза">
-            <div class="charCard__name">Барбоскины — Роза</div>
-          </div>
-          <div class="charCard kids">
-            <img src="assets/characters/barboskiny_liza.jpg" loading="lazy" alt="Барбоскины — Лиза">
-            <div class="charCard__name">Барбоскины — Лиза</div>
+          <div class="priceCard">
+            <div class="priceTag" data-i18n="pricing.3.tag">Максимум вау</div>
+            <h3 class="priceTitle" data-i18n="pricing.3.title">Премиум</h3>
+            <p class="priceText" data-i18n="pricing.3.text">Для больших праздников: эффектно и “как в кино”.</p>
+            <div class="priceValue" data-i18n="pricing.3.price">от 12 000 ₸</div>
+            <ul class="priceList">
+              <li data-i18n="pricing.3.li1">2 аниматора / ростовая кукла</li>
+              <li data-i18n="pricing.3.li2">Шоу или расширенный квест</li>
+              <li data-i18n="pricing.3.li3">Индивидуальный сценарий</li>
+              <li data-i18n="pricing.3.li4">Много фото-моментов</li>
+            </ul>
+            <div style="margin-top:14px;">
+              <a class="btn btn--ghost btn--block" href="#form" onclick="prefillPackage('PREMIUM')" data-i18n="pricing.3.btn">Выбрать Премиум</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CHARACTERS -->
+    <section id="characters" class="section">
+  <div class="container">
+    <div class="sectionHead">
+      <h2 data-i18n="chars.title">Персонажи</h2>
+      <p data-i18n="chars.subtitle">Нажмите “Выбрать героя” — он добавится в заявку автоматически.</p>
+    </div>
+
+    <div class="filters">
+      <button class="chip chip--active" onclick="filterChar('all', this)" data-i18n="chars.filterAll">Все</button>
+      <button class="chip" onclick="filterChar('girls', this)" data-i18n="chars.filterGirls">Для девочек</button>
+      <button class="chip" onclick="filterChar('boys', this)" data-i18n="chars.filterBoys">Для мальчиков</button>
+      <button class="chip" onclick="filterChar('kids', this)" data-i18n="chars.filterKids">Универсальные</button>
+    </div>
+
+    <div class="gridChars gridChars--lux">
+
+      <!-- Куроми -->
+      <article class="charCardLux girls">
+        <div class="charMedia">
+          <img src="assets/characters/kuromi.jpg" loading="lazy" alt="Куроми">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgePopular">Популярно</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgePhoto">Фото-вау</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Куроми</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Куроми')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Куроми','assets/characters/kuromi.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Лабубу -->
+      <article class="charCardLux kids">
+        <div class="charMedia">
+          <img src="assets/characters/labubu.jpg" loading="lazy" alt="Лабубу">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeNew">Новинка</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeCute">Мимими</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Лабубу</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Лабубу')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Лабубу','assets/characters/labubu.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Три кота — Карамелька -->
+      <article class="charCardLux kids">
+        <div class="charMedia">
+          <img src="assets/characters/threecats_karamelka.jpg" loading="lazy" alt="Три кота — Карамелька">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeFamily">Семейно</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeKids">Для всех</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Три кота — Карамелька</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Три кота — Карамелька')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Три кота — Карамелька','assets/characters/threecats_karamelka.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Три кота — Компот -->
+      <article class="charCardLux kids">
+        <div class="charMedia">
+          <img src="assets/characters/threecats_kompot.jpg" loading="lazy" alt="Три кота — Компот">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeFamily">Семейно</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeKids">Для всех</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Три кота — Компот</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Три кота — Компот')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Три кота — Компот','assets/characters/threecats_kompot.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Леди Баг -->
+      <article class="charCardLux girls">
+        <div class="charMedia">
+          <img src="assets/characters/ladybug.jpg" loading="lazy" alt="Леди Баг">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeTop">Топ</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeHeroine">Героиня</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Леди Баг</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Леди Баг')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Леди Баг','assets/characters/ladybug.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Супер Кот -->
+      <article class="charCardLux boys">
+        <div class="charMedia">
+          <img src="assets/characters/catnoir.jpg" loading="lazy" alt="Супер Кот">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeAction">Экшн</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeHero">Герой</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Супер Кот</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Супер Кот')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Супер Кот','assets/characters/catnoir.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Эльза -->
+      <article class="charCardLux girls">
+        <div class="charMedia">
+          <img src="assets/characters/elsa.jpg" loading="lazy" alt="Эльза">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeTop">Топ</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgePrincess">Принцесса</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Эльза</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Эльза')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Эльза','assets/characters/elsa.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Анна -->
+      <article class="charCardLux girls">
+        <div class="charMedia">
+          <img src="assets/characters/anna.jpg" loading="lazy" alt="Анна">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgePopular">Популярно</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgePrincess">Принцесса</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Анна</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Анна')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Анна','assets/characters/anna.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Ариэль -->
+      <article class="charCardLux girls">
+        <div class="charMedia">
+          <img src="assets/characters/ariel.jpg" loading="lazy" alt="Принцесса Ариэль">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeMagic">Магия</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgePrincess">Принцесса</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Принцесса Ариэль</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Принцесса Ариэль')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Принцесса Ариэль','assets/characters/ariel.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Щенячий патруль — Гонщик -->
+      <article class="charCardLux kids">
+        <div class="charMedia">
+          <img src="assets/characters/pawpatrol_rider.jpg" loading="lazy" alt="Щенячий патруль — Гонщик">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeKids">Для всех</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeQuest">Квест</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Щенячий патруль — Гонщик</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Щенячий патруль — Гонщик')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Щенячий патруль — Гонщик','assets/characters/pawpatrol_rider.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Щенячий патруль — Скай -->
+      <article class="charCardLux kids">
+        <div class="charMedia">
+          <img src="assets/characters/pawpatrol_sky.jpg" loading="lazy" alt="Щенячий патруль — Скай">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgePopular">Популярно</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeKids">Для всех</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Щенячий патруль — Скай</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Щенячий патруль — Скай')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Щенячий патруль — Скай','assets/characters/pawpatrol_sky.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Соник -->
+      <article class="charCardLux boys">
+        <div class="charMedia">
+          <img src="assets/characters/sonic.jpg" loading="lazy" alt="Соник">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeAction">Экшн</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeTop">Топ</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Соник</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Соник')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Соник','assets/characters/sonic.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Человек-паук -->
+      <article class="charCardLux boys">
+        <div class="charMedia">
+          <img src="assets/characters/spiderman.jpg" loading="lazy" alt="Человек-паук">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeAction">Экшн</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeHero">Герой</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Человек-паук</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Человек-паук')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Человек-паук','assets/characters/spiderman.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Барби -->
+      <article class="charCardLux girls">
+        <div class="charMedia">
+          <img src="assets/characters/barbie.jpg" loading="lazy" alt="Барби">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeTop">Топ</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeStyle">Стиль</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Барби</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Барби')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Барби','assets/characters/barbie.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Кукла LOL -->
+      <article class="charCardLux girls">
+        <div class="charMedia">
+          <img src="assets/characters/lol.jpg" loading="lazy" alt="Кукла LOL">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeCute">Мимими</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgePhoto">Фото-вау</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Кукла LOL</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Кукла LOL')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Кукла LOL','assets/characters/lol.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Минни Маус -->
+      <article class="charCardLux girls">
+        <div class="charMedia">
+          <img src="assets/characters/minnie.jpg" loading="lazy" alt="Минни Маус">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeClassic">Классика</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgePhoto">Фото-вау</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Минни Маус</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Минни Маус')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Минни Маус','assets/characters/minnie.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Барбоскины — Роза -->
+      <article class="charCardLux kids">
+        <div class="charMedia">
+          <img src="assets/characters/barboskiny_roza.jpg" loading="lazy" alt="Барбоскины — Роза">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeKids">Для всех</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeFamily">Семейно</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Барбоскины — Роза</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Барбоскины — Роза')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Барбоскины — Роза','assets/characters/barboskiny_roza.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Барбоскины — Лиза -->
+      <article class="charCardLux kids">
+        <div class="charMedia">
+          <img src="assets/characters/barboskiny_liza.jpg" loading="lazy" alt="Барбоскины — Лиза">
+          <div class="charOverlay"></div>
+          <div class="charBadges">
+            <span class="charBadge" data-i18n="chars.badgeKids">Для всех</span>
+            <span class="charBadge charBadge--soft" data-i18n="chars.badgeFamily">Семейно</span>
+          </div>
+        </div>
+        <div class="charBody">
+          <div class="charTop">
+            <div class="charName">Барбоскины — Лиза</div>
+            <div class="charMeta" data-i18n="chars.age">3–12 лет</div>
+          </div>
+          <div class="charDesc" data-i18n="chars.desc">Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.</div>
+          <div class="charActions">
+            <button class="btn btn--primary btn--block" onclick="chooseCharacter('Барбоскины — Лиза')" data-i18n="chars.chooseBtn">Выбрать героя</button>
+            <button class="btn btn--ghost btn--block" onclick="openCharPreview('Барбоскины — Лиза','assets/characters/barboskiny_liza.jpg')" data-i18n="chars.previewBtn">Посмотреть ближе</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <section class="section" id="portfolio">
+  <div class="container">
+    <div class="sectionHead">
+      <h2 data-i18n="port.title">Портфолио</h2>
+      <p data-i18n="port.subtitle">Нажмите на фото — откроется крупно. Добавьте свои кадры и видео-обложки.</p>
+    </div>
+
+    <div class="portGrid">
+      <button class="portItem" onclick="openPort('assets/portfolio/p1.jpg', this)" aria-label="Фото 1">
+        <img src="assets/portfolio/p1.jpg" alt="Праздник 1" loading="lazy">
+        <span class="portTag" data-i18n="port.tag1">День рождения</span>
+      </button>
+
+      <button class="portItem" onclick="openPort('assets/portfolio/p2.jpg', this)" aria-label="Фото 2">
+        <img src="assets/portfolio/p2.jpg" alt="Праздник 2" loading="lazy">
+        <span class="portTag" data-i18n="port.tag2">Квест</span>
+      </button>
+
+      <button class="portItem" onclick="openPort('assets/portfolio/p3.jpg', this)" aria-label="Фото 3">
+        <img src="assets/portfolio/p3.jpg" alt="Праздник 3" loading="lazy">
+        <span class="portTag" data-i18n="port.tag3">Пена-шоу</span>
+      </button>
+
+      <button class="portItem" onclick="openPort('assets/portfolio/p4.jpg', this)" aria-label="Фото 4">
+        <img src="assets/portfolio/p4.jpg" alt="Праздник 4" loading="lazy">
+        <span class="portTag" data-i18n="port.tag4">Ростовые</span>
+      </button>
+
+      <button class="portItem portItem--wide" onclick="openPort('assets/portfolio/p5.jpg', this)" aria-label="Фото 5">
+        <img src="assets/portfolio/p5.jpg" alt="Праздник 5" loading="lazy">
+        <span class="portTag" data-i18n="port.tag5">Шоу-программа</span>
+      </button>
+
+      <button class="portItem" onclick="openPort('assets/portfolio/p6.jpg', this)" aria-label="Фото 6">
+        <img src="assets/portfolio/p6.jpg" alt="Праздник 6" loading="lazy">
+        <span class="portTag" data-i18n="port.tag6">Фотозона</span>
+      </button>
+    </div>
+
+    <div class="portNote" data-i18n="port.note">
+      Совет: добавьте 6–12 фото с реальных праздников — доверие вырастет сразу.
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="portModal" id="portModal" aria-hidden="true">
+    <div class="portModal__backdrop" onclick="closePort()"></div>
+    <div class="portModal__panel" role="dialog" aria-modal="true">
+      <button class="portModal__close" onclick="closePort()" aria-label="Close">✕</button>
+      <img id="portImg" src="" alt="">
+    </div>
+  </div>
+</section>
+
+
+  <!-- MODAL PREVIEW -->
+  <div class="charModal" id="charModal" aria-hidden="true">
+    <div class="charModal__backdrop" onclick="closeCharPreview()"></div>
+    <div class="charModal__panel" role="dialog" aria-modal="true">
+      <div class="charModal__head">
+        <div class="charModal__title" id="charModalTitle">Герой</div>
+        <button class="charModal__close" onclick="closeCharPreview()" aria-label="Close">✕</button>
+      </div>
+      <div class="charModal__content">
+        <img id="charModalImg" src="" alt="">
+        <div class="charModal__actions">
+          <button class="btn btn--primary btn--block" id="charModalChoose" data-i18n="chars.chooseBtn">Выбрать героя</button>
+          <a class="btn btn--ghost btn--block" href="#form" onclick="closeCharPreview()" data-i18n="chars.toForm">Перейти к заявке</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CALC -->
     <section id="calc" class="section">
       <div class="container">
         <div class="sectionHead">
-          <h2>Калькулятор стоимости</h2>
-          <p>Примерная цена, чтобы быстро понять бюджет.</p>
+          <h2 data-i18n="calc.title">Калькулятор стоимости</h2>
+          <p data-i18n="calc.subtitle">Примерная цена, чтобы быстро понять бюджет.</p>
         </div>
 
         <div class="calc">
           <label class="field">
-            <span>Количество детей</span>
+            <span data-i18n="calc.kidsLabel">Количество детей</span>
             <input type="number" id="kids" min="1" value="5">
           </label>
 
           <label class="field">
-            <span>Длительность</span>
+            <span data-i18n="calc.timeLabel">Длительность</span>
             <select id="time">
-              <option value="5000">30 минут</option>
-              <option value="8000">60 минут</option>
-              <option value="12000">90 минут</option>
+              <option value="5000" data-i18n="calc.time30">30 минут</option>
+              <option value="8000" data-i18n="calc.time60">60 минут</option>
+              <option value="12000" data-i18n="calc.time90">90 минут</option>
             </select>
           </label>
 
           <label class="field field--inline">
             <input type="checkbox" id="foam">
-            <span>Пена-шоу (+4000 ₸)</span>
+            <span data-i18n="calc.foam">Пена-шоу (+4000 ₸)</span>
           </label>
 
           <label class="field">
-            <span>Персонаж</span>
+            <span data-i18n="calc.charLabel">Персонаж</span>
             <select id="character">
-              <option value="0">Без персонажа</option>
-              <option value="3000">Популярный герой (+3000 ₸)</option>
-              <option value="5000">Премиум герой (+5000 ₸)</option>
+              <option value="0" data-i18n="calc.char0">Без персонажа</option>
+              <option value="3000" data-i18n="calc.char1">Популярный герой (+3000 ₸)</option>
+              <option value="5000" data-i18n="calc.char2">Премиум герой (+5000 ₸)</option>
             </select>
           </label>
 
-          <button class="btn btn--primary btn--block" onclick="calculate()">Посчитать</button>
-          <div class="calc__result" id="result">Итого: —</div>
-          <a class="btn btn--ghost btn--block" href="#form">Оставить заявку</a>
+          <button class="btn btn--primary btn--block" onclick="calculate()" data-i18n="calc.btn">Посчитать</button>
+          <div class="calc__result" id="result" data-i18n="calc.resultInit">Итого: —</div>
+          <a class="btn btn--ghost btn--block" href="#form" data-i18n="calc.toForm">Оставить заявку</a>
+
+          <div class="smallNote" data-i18n="calc.note">
+            *Точный расчёт зависит от места, возраста и сценария. Мы уточним детали в сообщениях.
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 data-i18n="reviews.title">Отзывы родителей</h2>
+          <p data-i18n="reviews.subtitle">Реальные сценарии: дома, в зале и на большом празднике.</p>
+        </div>
+
+        <div class="gridReviews">
+          <div class="review">
+            <p class="reviewText" data-i18n="reviews.r1.text">«Эльза была как настоящая! Дети слушали, играли и смеялись без остановки. Родители наконец выдохнули 🙂»</p>
+            <div class="reviewMeta">
+              <div class="avatar">М</div>
+              <div data-i18n="reviews.r1.meta">Марина · 5 лет · Аксу</div>
+            </div>
+          </div>
+
+          <div class="review">
+            <p class="reviewText" data-i18n="reviews.r2.text">«Заказывали Человека-паука на 8 лет — супер! Всё вовремя, аккуратно, программа энергичная и без хаоса.»</p>
+            <div class="reviewMeta">
+              <div class="avatar">И</div>
+              <div data-i18n="reviews.r2.meta">Игорь · 8 лет · Аксу</div>
+            </div>
+          </div>
+
+          <div class="review">
+            <p class="reviewText" data-i18n="reviews.r3.text">«Пена-шоу — топ! Очень красиво и безопасно. Спасибо за сервис: быстро договорились и всё привезли.»</p>
+            <div class="reviewMeta">
+              <div class="avatar">А</div>
+              <div data-i18n="reviews.r3.meta">Алия · 7 лет · Аксу</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="luxMarquee">
+  <div class="luxMarquee__track">
+    <div class="luxMarquee__item" data-i18n="marq.1">💎 Премиум подача</div>
+    <div class="luxMarquee__item" data-i18n="marq.2">🛡️ Безопасные игры</div>
+    <div class="luxMarquee__item" data-i18n="marq.3">🎭 Сценарии под возраст</div>
+    <div class="luxMarquee__item" data-i18n="marq.4">📸 Фотогеничные моменты</div>
+    <div class="luxMarquee__item" data-i18n="marq.5">⏱️ Пунктуально</div>
+    <div class="luxMarquee__item" data-i18n="marq.6">✨ Вау-эффект</div>
+
+    <!-- дубль для бесшовной анимации -->
+    <div class="luxMarquee__item" data-i18n="marq.1">💎 Премиум подача</div>
+    <div class="luxMarquee__item" data-i18n="marq.2">🛡️ Безопасные игры</div>
+    <div class="luxMarquee__item" data-i18n="marq.3">🎭 Сценарии под возраст</div>
+    <div class="luxMarquee__item" data-i18n="marq.4">📸 Фотогеничные моменты</div>
+    <div class="luxMarquee__item" data-i18n="marq.5">⏱️ Пунктуально</div>
+    <div class="luxMarquee__item" data-i18n="marq.6">✨ Вау-эффект</div>
+
+    <!-- дубль для бесшовной анимации -->
+    <div class="luxMarquee__item" data-i18n="marq.1">💎 Премиум подача</div>
+    <div class="luxMarquee__item" data-i18n="marq.2">🛡️ Безопасные игры</div>
+    <div class="luxMarquee__item" data-i18n="marq.3">🎭 Сценарии под возраст</div>
+    <div class="luxMarquee__item" data-i18n="marq.4">📸 Фотогеничные моменты</div>
+    <div class="luxMarquee__item" data-i18n="marq.5">⏱️ Пунктуально</div>
+    <div class="luxMarquee__item" data-i18n="marq.6">✨ Вау-эффект</div>
+
+    <!-- дубль для бесшовной анимации -->
+    <div class="luxMarquee__item" data-i18n="marq.1">💎 Премиум подача</div>
+    <div class="luxMarquee__item" data-i18n="marq.2">🛡️ Безопасные игры</div>
+    <div class="luxMarquee__item" data-i18n="marq.3">🎭 Сценарии под возраст</div>
+    <div class="luxMarquee__item" data-i18n="marq.4">📸 Фотогеничные моменты</div>
+    <div class="luxMarquee__item" data-i18n="marq.5">⏱️ Пунктуально</div>
+    <div class="luxMarquee__item" data-i18n="marq.6">✨ Вау-эффект</div>
+  </div>
+</section>
+
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 data-i18n="faq.title">FAQ</h2>
+          <p data-i18n="faq.subtitle">Отвечаем на самые частые вопросы.</p>
+        </div>
+
+        <div class="faq">
+          <button class="faqItem" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q1">С какого возраста подходит программа?</span><i>+</i>
+          </button>
+          <div class="faqBody" data-i18n="faq.a1">Подходит для детей 3–12 лет. Сценарий адаптируем по возрасту.</div>
+
+          <button class="faqItem" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q2">Сколько длится праздник?</span><i>+</i>
+          </button>
+          <div class="faqBody" data-i18n="faq.a2">Чаще всего 60–90 минут. Можно короче/дольше по запросу.</div>
+
+          <button class="faqItem" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q3">Безопасно ли пена-шоу?</span><i>+</i>
+          </button>
+          <div class="faqBody" data-i18n="faq.a3">Да, используем сертифицированную пену и соблюдаем правила площадки.</div>
+
+          <button class="faqItem" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q4">Нужно ли что-то готовить?</span><i>+</i>
+          </button>
+          <div class="faqBody" data-i18n="faq.a4">Нет. Мы привозим реквизит и музыку. От вас — место и хорошее настроение 🙂</div>
+
+          <button class="faqItem" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q5">Можно ли выбрать персонажа?</span><i>+</i>
+          </button>
+          <div class="faqBody" data-i18n="faq.a5">Да. Нажмите на карточку персонажа — он автоматически добавится в заявку.</div>
+
+          <button class="faqItem" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q6">Как быстро вы отвечаете?</span><i>+</i>
+          </button>
+          <div class="faqBody" data-i18n="faq.a6">Обычно в течение 5–30 минут в рабочее время.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
     <section id="form" class="section">
       <div class="container">
         <div class="sectionHead">
-          <h2>Оставить заявку</h2>
-          <p>Мы уточним детали и предложим лучший сценарий под возраст и формат.</p>
+          <h2 data-i18n="form.title">Оставить заявку</h2>
+          <p data-i18n="form.subtitle">Мы уточним детали и предложим лучший сценарий под возраст и формат.</p>
         </div>
 
         <form class="formLux" onsubmit="sendForm(event)">
           <div class="formGrid">
             <label class="field">
-              <span>Ваше имя</span>
-              <input id="name" placeholder="Например, Алия" required>
+              <span data-i18n="form.nameLabel">Ваше имя</span>
+              <input id="name" data-i18n-placeholder="form.namePh" placeholder="Например, Алия" required>
             </label>
 
             <label class="field">
-              <span>Телефон</span>
-              <input id="phone" type="tel" placeholder="+7 ..." required>
+              <span data-i18n="form.phoneLabel">Телефон</span>
+              <input id="phone" type="tel" data-i18n-placeholder="form.phonePh" placeholder="+7 ..." required>
             </label>
 
             <label class="field">
-              <span>Возраст ребёнка</span>
-              <input id="age" type="number" min="3" max="12" placeholder="6">
+              <span data-i18n="form.ageLabel">Возраст ребёнка</span>
+              <input id="age" type="number" min="3" max="12" data-i18n-placeholder="form.agePh" placeholder="6">
             </label>
 
             <label class="field">
-              <span>Дата</span>
+              <span data-i18n="form.dateLabel">Дата</span>
               <input id="date" type="date">
             </label>
           </div>
 
           <label class="field">
-            <span>Комментарий</span>
-            <textarea id="comment" rows="4" placeholder="Персонаж, адрес, сколько детей, пожелания…"></textarea>
+            <span data-i18n="form.commentLabel">Комментарий</span>
+            <textarea id="comment" rows="4" data-i18n-placeholder="form.commentPh" placeholder="Персонаж, адрес, сколько детей, пожелания…"></textarea>
           </label>
 
-          <button class="btn btn--primary btn--block" type="submit">Отправить заявку</button>
-          <div class="smallNote">Заявки сохраняются в админке (в браузере).</div>
+          <button class="btn btn--primary btn--block" type="submit" data-i18n="form.btn">Отправить заявку</button>
+
+          <div class="smallNote" data-i18n="form.note">
+            Заявка сохранится в админке (в браузере). Для заявок “с любого устройства” подключим Telegram.
+          </div>
+
+          <div class="smallNote" style="margin-top:12px">
+            <a class="mutedLink" href="admin.html" data-i18n="form.adminLink">Открыть админку заявок</a>
+          </div>
         </form>
       </div>
     </section>
 
+    <section class="section">
+  <div class="container">
+    <div class="finalCta">
+      <div class="finalCta__left">
+        <div class="finalCta__kicker" data-i18n="final.kicker">Сделаем праздник без хлопот</div>
+        <h2 class="finalCta__title" data-i18n="final.title">Вы выбираете героя — мы делаем вау</h2>
+        <p class="finalCta__text" data-i18n="final.text">Оставьте заявку — предложим программу под возраст, место и бюджет.</p>
+
+        <div class="finalCta__points">
+          <div class="point"><span>✓</span> <span data-i18n="final.p1">Безопасно и аккуратно</span></div>
+          <div class="point"><span>✓</span> <span data-i18n="final.p2">Сценарий под ребёнка</span></div>
+          <div class="point"><span>✓</span> <span data-i18n="final.p3">Премиум-вид без переплат</span></div>
+        </div>
+      </div>
+
+      <div class="finalCta__right">
+        <a class="btn btn--primary btn--block" href="#form" data-i18n="final.btn1">Забронировать дату</a>
+        <a class="btn btn--ghost btn--block" href="#calc" data-i18n="final.btn2">Рассчитать стоимость</a>
+
+        <div class="finalCta__mini" data-i18n="final.mini">
+          Ответим быстро. Поможем выбрать персонажа и формат.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     <footer class="footer">
       <div class="container footer__inner">
-        <div>© Аниматоры Аксу</div>
+        <div data-i18n="footer.copy">© Аниматоры Аксу</div>
         <div class="footer__links">
-          <a href="admin.html" title="внутренняя страница">Админка</a>
+          <a class="mutedLink" href="admin.html" data-i18n="footer.admin">Админка</a>
         </div>
       </div>
     </footer>
   </main>
 
-  <!-- Плавающие кнопки (замени на свои) -->
+  <!-- Floating buttons (замени на свои) -->
   <a class="fab fab--wa" href="https://wa.me/77000000000" target="_blank" aria-label="WhatsApp">💬</a>
   <a class="fab fab--ig" href="https://instagram.com/ВАШ_АККАУНТ" target="_blank" aria-label="Instagram">📸</a>
 
-  <script src="js/main.js"></script>
+  <!-- Mobile sticky CTA -->
+  <div class="mobileCta">
+    <a class="btn btn--primary" href="#form" data-i18n="mobile.primary">Забронировать</a>
+    <a class="btn btn--ghost" href="#calc" data-i18n="mobile.secondary">Рассчитать</a>
+  </div>
+
+  <script src="js/main.js?v=2"></script>
+
+<div class="toast" id="toast" aria-hidden="true"></div>
 </body>
 </html>
