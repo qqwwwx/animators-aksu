@@ -869,3 +869,119 @@ body::before{
 .portItem img.imgFallback {
   border: 1px solid rgba(255,255,255,.10);
 }
+/* ===== Duo characters (2 photos in one card) ===== */
+.charMedia--duo{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:0;
+}
+.charMedia--duo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.charMedia--duo img:first-child{
+  border-right: 1px solid rgba(255,255,255,.10);
+}
+.charDuoLine{
+  color: rgba(255,255,255,.78);
+  font-size: 12px;
+  margin-top: 6px;
+}
+/* ===== Hero badges full width ===== */
+.hero__badges{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 2fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+.hero__badges .badge{
+  width: 100%;
+}
+
+/* на телефоне 2 в ряд */
+@media (max-width: 560px){
+  .hero__badges{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* ===== HERO: слева на всю ширину, справа вниз ===== */
+.hero__grid{
+  display: grid;
+  grid-template-columns: 1fr;   /* одна колонка */
+  gap: 16px;
+}
+
+.hero__text{ 
+  width: 100%;
+}
+
+/* Правая часть — вниз и тоже на всю ширину */
+.hero__card,
+.finalCta--top,
+.trust__grid,        /* если твои правые карточки лежат в trust внутри hero */
+.heroRight,          /* если есть обертка справа (на всякий) */
+.hero__right{
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+}
+
+/* Порядок: сначала текст, потом правая часть */
+.hero__text{ order: 1; }
+.hero__card{ order: 2; }
+.finalCta--top{ order: 3; }
+
+/* если у тебя справа есть блок "4 карточки" внутри hero — добавь ему order:4 */
+.hero__features,
+.heroCards,
+.hero__cards{
+  order: 4;
+}
+/* ===== HERO FIX: текст сверху на всю ширину, остальные блоки ниже ===== */
+
+/* 1) Делает hero__grid одной колонкой и задаёт зоны */
+.hero__grid{
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px;
+  grid-template-areas:
+    "text"
+    "cta"
+    "features";
+  align-items: start;
+}
+
+/* 2) Левый текст всегда вверху */
+.hero__text{
+  grid-area: text !important;
+  width: 100% !important;
+  max-width: none !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* 3) Блоки справа (быстрый заказ / люкс CTA) — вниз */
+.hero__card,
+.finalCta--top{
+  grid-area: cta !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* 4) Блок с карточками (которые были справа) — ещё ниже */
+.hero__features,
+.trust__grid,
+.heroCards,
+.hero__cards{
+  grid-area: features !important;
+  width: 100% !important;
+}
