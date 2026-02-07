@@ -839,3 +839,33 @@ body::before{
 @media (prefers-reduced-motion: reduce){
   .luxHover, .luxHover::after{ transition:none !important; }
 }
+/* ===== Auto blur-up loading + fallback placeholder ===== */
+
+/* базовое состояние, пока грузится */
+.imgBlur {
+  filter: blur(16px);
+  transform: scale(1.04);
+  opacity: 0.85;
+  transition: filter .55s ease, transform .55s ease, opacity .55s ease;
+  will-change: filter, transform, opacity;
+}
+
+/* после загрузки */
+.imgSharp {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* красивая заглушка (фон у img, если src пустой/ошибка) */
+.imgFallback {
+  background: radial-gradient(600px 220px at 20% 10%, rgba(255,77,109,.22), transparent 60%),
+              radial-gradient(600px 220px at 85% 30%, rgba(124,58,237,.22), transparent 60%),
+              rgba(255,255,255,.06);
+}
+
+/* чуть “дороже” смотрится на карточках персонажей/портфолио */
+.charMedia img.imgFallback,
+.portItem img.imgFallback {
+  border: 1px solid rgba(255,255,255,.10);
+}

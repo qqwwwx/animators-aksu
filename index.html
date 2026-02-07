@@ -23,7 +23,6 @@
 
       <nav class="nav">
         <a href="#services" data-i18n="nav.services">Услуги</a>
-        <a href="#pricing" data-i18n="nav.pricing">Пакеты</a>
         <a href="#characters" data-i18n="nav.characters">Персонажи</a>
         <a href="#calc" data-i18n="nav.calc">Калькулятор</a>
         <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
@@ -100,7 +99,7 @@
         <div class="trustCard">
           <div class="trustCard__icon">🧸</div>
           <div class="trustCard__title" data-i18n="trust.2.title">Под возраст ребёнка</div>
-          <div class="trustCard__text" data-i18n="trust.2.text">3–5, 6–9, 10–12 — разные темпы и сценарии.</div>
+          <div class="trustCard__text" data-i18n="trust.2.text">3–7,7–12 — разные темпы и сценарии.</div>
         </div>
         <div class="trustCard">
           <div class="trustCard__icon">✨</div>
@@ -216,67 +215,6 @@
   </div>
 </section>
 
-
-    <!-- PRICING -->
-    <section class="section" id="pricing">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 data-i18n="pricing.title">Пакеты</h2>
-          <p data-i18n="pricing.subtitle">Три понятных варианта — под разные форматы и бюджет. Можно собрать индивидуально.</p>
-        </div>
-
-        <div class="gridPricing">
-          <div class="priceCard">
-            <div class="priceTag" data-i18n="pricing.1.tag">Лёгкий старт</div>
-            <h3 class="priceTitle" data-i18n="pricing.1.title">Мини</h3>
-            <p class="priceText" data-i18n="pricing.1.text">Коротко, ярко — идеально для дома и малышей.</p>
-            <div class="priceValue" data-i18n="pricing.1.price">от 5 000 ₸</div>
-            <ul class="priceList">
-              <li data-i18n="pricing.1.li1">1 аниматор</li>
-              <li data-i18n="pricing.1.li2">Игры по возрасту</li>
-              <li data-i18n="pricing.1.li3">Музыка + реквизит</li>
-              <li data-i18n="pricing.1.li4">Поздравление именинника</li>
-            </ul>
-            <div style="margin-top:14px;">
-              <a class="btn btn--ghost btn--block" href="#form" onclick="prefillPackage('MINI')" data-i18n="pricing.1.btn">Выбрать Мини</a>
-            </div>
-          </div>
-
-          <div class="priceCard priceCard--hot">
-            <div class="priceTag" data-i18n="pricing.2.tag">Самый популярный</div>
-            <h3 class="priceTitle" data-i18n="pricing.2.title">Классика</h3>
-            <p class="priceText" data-i18n="pricing.2.text">Полноценная программа с сюжетом и вовлечением.</p>
-            <div class="priceValue" data-i18n="pricing.2.price">от 8 000 ₸</div>
-            <ul class="priceList">
-              <li data-i18n="pricing.2.li1">Сюжетный сценарий</li>
-              <li data-i18n="pricing.2.li2">Конкурсы и активности</li>
-              <li data-i18n="pricing.2.li3">Тематический реквизит</li>
-              <li data-i18n="pricing.2.li4">Мини-квест</li>
-            </ul>
-            <div style="margin-top:14px;">
-              <a class="btn btn--primary btn--block" href="#form" onclick="prefillPackage('CLASSIC')" data-i18n="pricing.2.btn">Выбрать Классику</a>
-            </div>
-          </div>
-
-          <div class="priceCard">
-            <div class="priceTag" data-i18n="pricing.3.tag">Максимум вау</div>
-            <h3 class="priceTitle" data-i18n="pricing.3.title">Премиум</h3>
-            <p class="priceText" data-i18n="pricing.3.text">Для больших праздников: эффектно и “как в кино”.</p>
-            <div class="priceValue" data-i18n="pricing.3.price">от 12 000 ₸</div>
-            <ul class="priceList">
-              <li data-i18n="pricing.3.li1">2 аниматора / ростовая кукла</li>
-              <li data-i18n="pricing.3.li2">Шоу или расширенный квест</li>
-              <li data-i18n="pricing.3.li3">Индивидуальный сценарий</li>
-              <li data-i18n="pricing.3.li4">Много фото-моментов</li>
-            </ul>
-            <div style="margin-top:14px;">
-              <a class="btn btn--ghost btn--block" href="#form" onclick="prefillPackage('PREMIUM')" data-i18n="pricing.3.btn">Выбрать Премиум</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CHARACTERS -->
     <section id="characters" class="section">
   <div class="container">
@@ -287,10 +225,6 @@
 
     <div class="filters">
       <button class="chip chip--active" onclick="filterChar('all', this)" data-i18n="chars.filterAll">Все</button>
-      <button class="chip" onclick="filterChar('girls', this)" data-i18n="chars.filterGirls">Для девочек</button>
-      <button class="chip" onclick="filterChar('boys', this)" data-i18n="chars.filterBoys">Для мальчиков</button>
-      <button class="chip" onclick="filterChar('kids', this)" data-i18n="chars.filterKids">Универсальные</button>
-    </div>
 
     <div class="gridChars gridChars--lux">
 
@@ -1036,8 +970,8 @@
   </main>
 
   <!-- Floating buttons (замени на свои) -->
-  <a class="fab fab--wa" href="https://wa.me/77000000000" target="_blank" aria-label="WhatsApp">💬</a>
-  <a class="fab fab--ig" href="https://instagram.com/ВАШ_АККАУНТ" target="_blank" aria-label="Instagram">📸</a>
+  <a class="fab fab--wa" href="https://wa.me/+77071375867" target="_blank" aria-label="WhatsApp">💬</a>
+  <a class="fab fab--ig" href="https://www.instagram.com/animator_tamara?igsh=bHcwaXJob3E3dWNq" target="_blank" aria-label="Instagram">📸</a>
 
   <!-- Mobile sticky CTA -->
   <div class="mobileCta">

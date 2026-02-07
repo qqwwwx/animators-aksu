@@ -7,7 +7,6 @@ const I18N = {
     "brand.tag":"праздники 3–12 лет",
 
     "nav.services":"Услуги",
-    "nav.pricing":"Пакеты",
     "nav.characters":"Персонажи",
     "nav.calc":"Калькулятор",
     "nav.reviews":"Отзывы",
@@ -34,7 +33,7 @@ const I18N = {
     "trust.1.title":"Аккуратно и безопасно",
     "trust.1.text":"Игры без риска, реквизит чистый и проверенный.",
     "trust.2.title":"Под возраст ребёнка",
-    "trust.2.text":"3–5, 6–9, 10–12 — разные темпы и сценарии.",
+    "trust.2.text":"3–7,7–12 — разные темпы и сценарии.",
     "trust.3.title":"Уникальные сценарии",
     "trust.3.text":"Квесты, сюжеты, интерактив — не “как у всех”.",
     "trust.4.title":"Премиум без переплат",
@@ -55,44 +54,9 @@ const I18N = {
     "services.6.title":"Премиум-сервис",
     "services.6.text":"Пунктуальность, аккуратность, приятная коммуникация.",
 
-    "pricing.title":"Пакеты",
-    "pricing.subtitle":"Три понятных варианта — под разные форматы и бюджет. Можно собрать индивидуально.",
-    "pricing.1.tag":"Лёгкий старт",
-    "pricing.1.title":"Мини",
-    "pricing.1.text":"Коротко, ярко — идеально для дома и малышей.",
-    "pricing.1.price":"от 5 000 ₸",
-    "pricing.1.li1":"1 аниматор",
-    "pricing.1.li2":"Игры по возрасту",
-    "pricing.1.li3":"Музыка + реквизит",
-    "pricing.1.li4":"Поздравление именинника",
-    "pricing.1.btn":"Выбрать Мини",
-
-    "pricing.2.tag":"Самый популярный",
-    "pricing.2.title":"Классика",
-    "pricing.2.text":"Полноценная программа с сюжетом и вовлечением.",
-    "pricing.2.price":"от 8 000 ₸",
-    "pricing.2.li1":"Сюжетный сценарий",
-    "pricing.2.li2":"Конкурсы и активности",
-    "pricing.2.li3":"Тематический реквизит",
-    "pricing.2.li4":"Мини-квест",
-    "pricing.2.btn":"Выбрать Классику",
-
-    "pricing.3.tag":"Максимум вау",
-    "pricing.3.title":"Премиум",
-    "pricing.3.text":"Для больших праздников: эффектно и “как в кино”.",
-    "pricing.3.price":"от 12 000 ₸",
-    "pricing.3.li1":"2 аниматора / ростовая кукла",
-    "pricing.3.li2":"Шоу или расширенный квест",
-    "pricing.3.li3":"Индивидуальный сценарий",
-    "pricing.3.li4":"Много фото-моментов",
-    "pricing.3.btn":"Выбрать Премиум",
-
     "chars.title":"Персонажи",
     "chars.subtitle":"Нажмите на героя — он автоматически добавится в заявку.",
     "chars.filterAll":"Все",
-    "chars.filterGirls":"Для девочек",
-    "chars.filterBoys":"Для мальчиков",
-    "chars.filterKids":"Универсальные",
 
     // === NEW (для люкс-блока персонажей) ===
     "chars.chooseBtn":"Выбрать героя",
@@ -230,7 +194,6 @@ const I18N = {
     "brand.tag":"3–12 жас мерекелері",
 
     "nav.services":"Қызметтер",
-    "nav.pricing":"Пакеттер",
     "nav.characters":"Кейіпкерлер",
     "nav.calc":"Есептеу",
     "nav.reviews":"Пікірлер",
@@ -257,65 +220,15 @@ const I18N = {
     "trust.1.title":"Ұқыпты әрі қауіпсіз",
     "trust.1.text":"Қауіпсіз ойындар, таза әрі тексерілген реквизит.",
     "trust.2.title":"Баланың жасына сай",
-    "trust.2.text":"3–5, 6–9, 10–12 — әр жаста өз қарқыны мен сценарийі.",
+    "trust.2.text":"3-7,7-12 — әр жаста өз қарқыны мен сценарийі.",
     "trust.3.title":"Бірегей сценарийлер",
     "trust.3.text":"Квест, сюжет, интерактив — “бәріндей” емес.",
     "trust.4.title":"Артық төлемсіз премиум",
     "trust.4.text":"Әдемі, сапалы және әділ баға.",
 
-    "services.title":"Қызметтер",
-    "services.subtitle":"Форматты таңдаңыз — біз мерекені сізге сай құрастырамыз.",
-    "services.1.title":"Балалар мерекесі",
-    "services.1.text":"Туған күн “толық дайын”: ойын, музыка, сайыстар.",
-    "services.2.title":"Көбік шоу",
-    "services.2.text":"Вау-әсер және күлкі. Сертификатталған көбік.",
-    "services.3.title":"Өсу бойлы қуыршақтар",
-    "services.3.text":"Құшақтау, фото, кейіпкермен кездесу — керемет әсер.",
-    "services.4.title":"Тақырыптық квест",
-    "services.4.text":"Тапсырма, сюжет, миссия — балалар толық кіріседі.",
-    "services.5.title":"Кейіпкерлер",
-    "services.5.text":"Куроми, Лабубу, ханшайымдар, суперқаһармандар және т.б.",
-    "services.6.title":"Премиум сервис",
-    "services.6.text":"Уақыттылық, ұқыптылық, жайлы коммуникация.",
-
-    "pricing.title":"Пакеттер",
-    "pricing.subtitle":"Үш түсінікті нұсқа — формат пен бюджетке сай. Қалауыңызша құрастырамыз.",
-    "pricing.1.tag":"Жеңіл бастау",
-    "pricing.1.title":"Мини",
-    "pricing.1.text":"Қысқа әрі жарқын — үйге және кішкентайларға керемет.",
-    "pricing.1.price":"5 000 ₸ бастап",
-    "pricing.1.li1":"1 аниматор",
-    "pricing.1.li2":"Жасқа сай ойындар",
-    "pricing.1.li3":"Музыка + реквизит",
-    "pricing.1.li4":"Туған күн иесін құттықтау",
-    "pricing.1.btn":"Мини таңдау",
-
-    "pricing.2.tag":"Ең танымал",
-    "pricing.2.title":"Классика",
-    "pricing.2.text":"Сюжеті бар толық бағдарлама, балаларды толық тартады.",
-    "pricing.2.price":"8 000 ₸ бастап",
-    "pricing.2.li1":"Сюжеттік сценарий",
-    "pricing.2.li2":"Сайыс және белсенді ойындар",
-    "pricing.2.li3":"Тақырыптық реквизит",
-    "pricing.2.li4":"Мини-квест",
-    "pricing.2.btn":"Классиканы таңдау",
-
-    "pricing.3.tag":"Максимум вау",
-    "pricing.3.title":"Премиум",
-    "pricing.3.text":"Үлкен мерекелерге: әсерлі әрі “кино сияқты”.",
-    "pricing.3.price":"12 000 ₸ бастап",
-    "pricing.3.li1":"2 аниматор / өсу бойлы кейіпкер",
-    "pricing.3.li2":"Шоу немесе кеңейтілген квест",
-    "pricing.3.li3":"Жеке сценарий",
-    "pricing.3.li4":"Көп фото-момент",
-    "pricing.3.btn":"Премиум таңдау",
-
     "chars.title":"Кейіпкерлер",
     "chars.subtitle":"Кейіпкерді басыңыз — өтінімге автоматты қосылады.",
     "chars.filterAll":"Барлығы",
-    "chars.filterGirls":"Қыздарға",
-    "chars.filterBoys":"Ұлдарға",
-    "chars.filterKids":"Универсал",
      
       // === NEW (для люкс-блока персонажей) ===
       
@@ -778,5 +691,104 @@ function showToast(text){
     card.addEventListener("mouseleave", ()=>{
       card.style.transform = "";
     });
+  });
+})();
+// ===== Auto placeholder + blur-up load for images =====
+(function autoImgEnhance(){
+  // какие картинки улучшаем (персонажи + портфолио; добавь селекторы при желании)
+  const targets = document.querySelectorAll(
+    "#characters img, #portfolio img, .charMedia img, .portItem img"
+  );
+
+  if(!targets.length) return;
+
+  // SVG-заглушка с именем (подставляем текст из alt или data-name)
+  function makePlaceholder(label){
+    const safe = (label || "Фото").toString().slice(0, 28);
+    const svg =
+`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200">
+  <defs>
+    <radialGradient id="g1" cx="20%" cy="10%" r="70%">
+      <stop offset="0%" stop-color="rgba(255,77,109,0.55)"/>
+      <stop offset="60%" stop-color="rgba(255,77,109,0)"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="85%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="rgba(124,58,237,0.55)"/>
+      <stop offset="60%" stop-color="rgba(124,58,237,0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0b0f1a"/>
+  <rect width="100%" height="100%" fill="url(#g1)"/>
+  <rect width="100%" height="100%" fill="url(#g2)"/>
+  <rect x="60" y="60" width="1080" height="1080" rx="120" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+        font-size="64" fill="rgba(255,255,255,0.92)" font-weight="800">
+    ${escapeXml(safe)}
+  </text>
+  <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+        font-size="34" fill="rgba(255,255,255,0.70)">
+    Нет фото — добавьте в assets
+  </text>
+</svg>`;
+
+    // data:image/svg+xml URI
+    return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+  }
+
+  function escapeXml(str){
+    return str.replace(/[<>&'"]/g, s => ({
+      "<":"&lt;", ">":"&gt;", "&":"&amp;", "'":"&apos;", "\"":"&quot;"
+    }[s]));
+  }
+
+  function setLoaded(img){
+    img.classList.remove("imgBlur");
+    img.classList.add("imgSharp");
+  }
+
+  function setLoading(img){
+    img.classList.add("imgBlur");
+    img.classList.remove("imgSharp");
+  }
+
+  function setFallback(img){
+    const label = img.getAttribute("alt") || img.dataset.name || "Фото";
+    img.classList.add("imgFallback");
+    img.src = makePlaceholder(label);
+    // заглушка сразу “резкая”
+    img.classList.remove("imgBlur");
+    img.classList.add("imgSharp");
+  }
+
+  targets.forEach(img => {
+    // добавим ленивую загрузку, если не указано
+    if(!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+    img.setAttribute("decoding", "async");
+
+    // если src пустой — сразу заглушка
+    const src = (img.getAttribute("src") || "").trim();
+    if(!src){
+      setFallback(img);
+      return;
+    }
+
+    // делаем blur пока грузится
+    setLoading(img);
+
+    // если уже загружено из кэша
+    if(img.complete && img.naturalWidth > 0){
+      setLoaded(img);
+    }
+
+    img.addEventListener("load", () => setLoaded(img), { once: true });
+
+    img.addEventListener("error", () => {
+      // если файл не найден / ошибка — ставим заглушку
+      setFallback(img);
+    }, { once: true });
   });
 })();
