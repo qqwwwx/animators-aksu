@@ -1055,3 +1055,257 @@ body::before{
   .waFloat{ bottom: 14px; }
   .igFloat{ bottom: 74px; }
 }
+/* ===== HERO Advantages (rect cards like trust) ===== */
+.heroAdvantages{
+  margin-top: 18px;
+}
+
+.advTitle{
+  font-size: 20px;
+  margin: 0 0 10px;
+  color: rgba(255,255,255,.92);
+}
+
+.advGrid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.advCard{
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+  border-radius: 18px;
+  padding: 14px 14px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.25);
+}
+
+.advTop{
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.advName{
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(255,255,255,.92);
+}
+
+/* адаптив */
+@media (max-width: 980px){
+  .advGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px){
+  .advGrid{ grid-template-columns: 1fr; }
+}
+/* ===== GLOBAL LAYOUT RESET (fix "узкая колонка") ===== */
+html, body{ width:100%; overflow-x:hidden; }
+main{ width:100% !important; max-width:none !important; }
+
+.section{ width:100%; max-width:none; }
+
+.container{
+  width: min(1120px, calc(100% - 32px)) !important;
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* Преимущества как услуги, но компактнее */
+.advAsServices .cardLux{
+  padding: 12px 12px;
+}
+
+.advAsServices .cardLux__title{
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.advAsServices .cardLux__text{
+  font-size: 12.5px;
+  opacity: .88;
+  line-height: 1.35;
+}
+/* ===== FIX: Преимущества как Услуги (компактно) ===== */
+.advAsServices{
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px;
+  justify-content: start;
+}
+
+@media (max-width: 980px){
+  .advAsServices{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 520px){
+  .advAsServices{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Сделаем карточки преимуществ менее “массивными” */
+.advAsServices .cardLux{
+  padding: 12px 12px;
+}
+.advAsServices .cardLux__title{
+  font-size: 14px;
+  font-weight: 900;
+}
+.advAsServices .cardLux__text{
+  font-size: 12.5px;
+  line-height: 1.35;
+  opacity: .85;
+}
+/* ===== Center layout: вернуть нормальный контейнер ===== */
+.container{
+  width: min(1120px, calc(100% - 32px)) !important;
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ===== grid3: 3 колонки как услуги ===== */
+.grid3{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* адаптив */
+@media (max-width: 980px){
+  .grid3{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px){
+  .grid3{ grid-template-columns: 1fr; }
+}
+
+/* ===== Преимущества = как услуги (компактные) ===== */
+.heroAdvantages{ margin-top: 14px; }
+.advTitle{ margin: 0 0 6px; }
+.advSub{
+  margin: 0 0 10px;
+  opacity: .8;
+  font-size: 13px;
+}
+
+/* НЕ даём преимуществам превращаться в полосы */
+.advAsServices{
+  width: 100%;
+  max-width: 100%;
+  display: grid !important;        /* важно */
+}
+
+/* чуть компактнее чем услуги */
+.advAsServices .cardLux{
+  padding: 12px 12px;
+}
+.advAsServices .cardLux__title{
+  font-size: 14px;
+  font-weight: 900;
+}
+.advAsServices .cardLux__text{
+  font-size: 12.5px;
+  line-height: 1.35;
+  opacity: .85;
+}
+/* =========================
+   HARD RESET LAYOUT (FIX)
+   ВСТАВИТЬ В КОНЕЦ style.css
+   ========================= */
+html, body { width: 100%; overflow-x: hidden; }
+body { display: block !important; }
+main, section { width: 100%; max-width: none !important; }
+
+/* Контейнер – всегда центр и нормальная ширина */
+.container{
+  width: min(1120px, calc(100% - 32px)) !important;
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Убрать любые "выпады на 100vw" если они остались где-то */
+*[style*="100vw"],
+.fullBleed,
+.hero__badges--full{
+  transform: none !important;
+  margin-left: 0 !important;
+}
+
+/* Секции – ровные отступы */
+.section { padding: 64px 0; }
+.hero.section { padding-top: 24px; }
+
+/* Сетки как раньше */
+.grid3{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px;
+}
+@media (max-width: 980px){
+  .grid3{ grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 520px){
+  .grid3{ grid-template-columns: 1fr !important; }
+}
+
+/* ПРЕИМУЩЕСТВА = как УСЛУГИ (компактно) */
+.advAsServices{
+  width: 100%;
+  display: grid !important; /* важно, чтобы не были полосами */
+}
+.advAsServices .cardLux{ padding: 12px 12px; }
+.advAsServices .cardLux__title{ font-size: 14px; font-weight: 900; }
+.advAsServices .cardLux__text{ font-size: 12.5px; line-height: 1.35; opacity: .85; }
+
+/* ===== Advantages: рамочки + жирный ===== */
+.advantagesGrid{
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.advantage{
+  font-weight: 900;                 /* жирный */
+  color: rgba(255,255,255,.92);
+
+  padding: 14px 14px;
+  border-radius: 16px;
+
+  border: 1px solid rgba(255,255,255,.14);     /* рамка */
+  background: rgba(255,255,255,.05);           /* стекло */
+  box-shadow: 0 18px 60px rgba(0,0,0,.22);
+  backdrop-filter: blur(10px);
+
+  transition: transform .2s ease, filter .2s ease, border-color .2s ease;
+}
+
+.advantage:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  border-color: rgba(255,255,255,.22);
+}
+
+/* адаптив */
+@media (max-width: 980px){
+  .advantagesGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px){
+  .advantagesGrid{ grid-template-columns: 1fr; }
+}
+.miniStats,
+.trust,
+.trust__grid{
+  display: none !important;
+}
