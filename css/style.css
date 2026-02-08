@@ -1309,3 +1309,157 @@ main, section { width: 100%; max-width: none !important; }
 .trust__grid{
   display: none !important;
 }
+.langSwitch{ display:flex; gap:8px; align-items:center; }
+.langBtn{
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);
+  color:rgba(255,255,255,.9);
+  cursor:pointer;
+}
+.langBtn.is-active{
+  background:linear-gradient(90deg, rgba(255,79,166,.9), rgba(139,72,255,.9));
+  border-color: transparent;
+}.langSwitch {
+  display: flex;
+  gap: 10px;
+}
+
+.langBtn {
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.4);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.langBtn:hover {
+  border-color: #fff;
+}
+
+.langBtn.chip--active {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== Language switch RU / KZ ===== */
+.langSwitch{
+  display: flex;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.35);
+}
+
+.langBtn{
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease;
+}
+
+.langBtn.chip--active{
+  background: transparent;
+  border: 1px solid #ff4d6d; /* красная рамка как на скрине */
+}
+/* ===== Language fade animation ===== */
+[data-i18n]{
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.lang-fade{
+  opacity: 0;
+  transform: translateY(4px);
+}
+/* =========================
+   Language capsule (site colors)
+========================= */
+.langCapsule{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 96px;
+  height: 38px;
+  padding: 4px;
+  border-radius: 999px;
+
+  /* стеклянный фон как у карточек */
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.04),
+    0 8px 24px rgba(0,0,0,.35);
+}
+
+.langCapsule__btn{
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  height: 100%;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.85);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color .25s ease;
+}
+
+/* ===== БЕГУНОК ===== */
+.langCapsule__thumb{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 999px;
+
+  /* ГРАДИЕНТ САЙТА */
+  background: linear-gradient(
+    135deg,
+    #ff4d6d 0%,
+    #c77dff 50%,
+    #7c3aed 100%
+  );
+
+  box-shadow:
+    0 6px 18px rgba(124,58,237,.45),
+    inset 0 0 0 1px rgba(255,255,255,.25);
+
+  transition: transform .4s cubic-bezier(.4,0,.2,1);
+}
+
+/* ===== ПОЛОЖЕНИЕ БЕГУНКА ===== */
+.langCapsule[data-lang="ru"] .langCapsule__thumb{
+  transform: translateX(0);
+}
+
+.langCapsule[data-lang="kz"] .langCapsule__thumb{
+  transform: translateX(100%);
+}
+
+/* ===== АКТИВНЫЙ ТЕКСТ ===== */
+.langCapsule[data-lang="ru"] #btnRU,
+.langCapsule[data-lang="kz"] #btnKZ{
+  color: #0b0f1a;
+  font-weight: 700;
+}
+
+/* ===== HOVER (мягкий glow) ===== */
+.langCapsule:hover{
+  border-color: rgba(199,125,255,.6);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.06),
+    0 0 0 4px rgba(199,125,255,.08),
+    0 12px 28px rgba(0,0,0,.45);
+}

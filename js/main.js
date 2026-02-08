@@ -1,5 +1,5 @@
-function $(id){ return document.getElementById(id); }
-
+﻿
+function $(id){return document.getElementById(id)}
 // ====== TRANSLATIONS (FULL SITE) ======
 const I18N = {
   ru: {
@@ -17,18 +17,13 @@ const I18N = {
     "hero.title":"Праздник, который запомнят",
     "hero.text":"Любимые герои, увлекательные игры премиум-сервис без переплат, вы отдыхаете- мы создаем настроение!",
     "hero.ctaPrimary":"Забронировать дату",
-    "hero.ctaSecondary":"Рассчитать стоимость",
-    "hero.badge1":"Безопасно",
-    "hero.badge2":"Сценарии под возраст",
-    "hero.badge3":"Надёжно и вовремя",
-    "hero.stat1":"Чистый реквизит",
-    "hero.stat2":"Пунктуальность",
-    "hero.stat3":"Фотогенично",
-    "hero.fastTitle":"Быстрый заказ",
-    "hero.fastText":"Оставьте номер — напишем в WhatsApp за пару минут.",
-    "hero.fastPlaceholder":"Телефон WhatsApp",
-    "hero.fastButton":"Хочу праздник",
-    "hero.fastHint":"Никакого спама. Только по делу 😊",
+     "adv.list.1":"🎉13 лет опыта",
+     "adv.list.2":"🎭Талантливые аниматоры",
+     "adv.list.3":"✨Оригинальные сценарии",
+     "adv.list.4":"👗Красочные костюмы",
+     "adv.list.5":"🧼Чистый реквизит",
+     "adv.list.6":"🛡️Безопасные игры", 
+     "adv.list.7":"Надёжно и вовремя",
 
     "trust.1.title":"Аккуратно и безопасно",
     "trust.1.text":"Игры без риска, реквизит чистый и проверенный.",
@@ -79,7 +74,6 @@ const I18N = {
     "chars.badgeClassic":"Классика",
     "chars.age":"3–12 лет",
     "chars.desc":"Игры, мини-квест и фотомоменты — аккуратно, весело, без перегруза.",
-
     "process.title":"Как проходит праздник",
     "process.subtitle":"Три шага — и у ребёнка праздник мечты, а у родителей спокойствие.",
     "process.s1.title":"1) Быстро уточняем детали",
@@ -110,7 +104,7 @@ const I18N = {
     "port.note":"Совет: добавьте 6–12 фото с реальных праздников — доверие вырастет сразу.",
 
     "marq.1":"💎 Премиум подача",
-    "marq.2":"🛡️ Безопасные игры",
+    "marq.2":"🛡 Безопасные игры",
     "marq.3":"🎭 Сценарии под возраст",
     "marq.4":"📸 Фотогеничные моменты",
     "marq.5":"⏱️ Пунктуально",
@@ -125,23 +119,6 @@ const I18N = {
     "final.btn1":"Забронировать дату",
     "final.btn2":"Рассчитать стоимость",
     "final.mini":"Ответим быстро. Поможем выбрать персонажа и формат.",
-
-    "calc.title":"Калькулятор стоимости",
-    "calc.subtitle":"Примерная цена, чтобы быстро понять бюджет.",
-    "calc.kidsLabel":"Количество детей",
-    "calc.timeLabel":"Длительность",
-    "calc.time30":"30 минут",
-    "calc.time60":"60 минут",
-    "calc.time90":"90 минут",
-    "calc.foam":"Пена-шоу (+4000 ₸)",
-    "calc.charLabel":"Персонаж",
-    "calc.char0":"Без персонажа",
-    "calc.char1":"Популярный герой (+3000 ₸)",
-    "calc.char2":"Премиум герой (+5000 ₸)",
-    "calc.btn":"Посчитать",
-    "calc.resultInit":"Итого: —",
-    "calc.toForm":"Оставить заявку",
-    "calc.note":"*Точный расчёт зависит от места, возраста и сценария. Мы уточним детали в сообщениях.",
 
     "reviews.title":"Отзывы родителей",
     "reviews.subtitle":"Реальные сценарии: дома, в зале и на большом празднике.",
@@ -204,18 +181,13 @@ const I18N = {
     "hero.title":"Есте қаларлық мереке",
     "hero.text":"Сүйікті кейіпкерлер, қызықты ойындар премиум қызмет артық төлемсіз, сіз демаласыз - біз көңіл-күй қалыптастырамыз!",
     "hero.ctaPrimary":"Күнді брондау",
-    "hero.ctaSecondary":"Бағаны есептеу",
-    "hero.badge1":"Қауіпсіз",
-    "hero.badge2":"Жасқа сай сценарий",
-    "hero.badge3":"Сенімді әрі уақытында",
-    "hero.stat1":"Таза реквизит",
-    "hero.stat2":"Уақыттылық",
-    "hero.stat3":"Әдемі фото-формат",
-    "hero.fastTitle":"Жылдам тапсырыс",
-    "hero.fastText":"Нөмір қалдырыңыз — WhatsApp-та тез жазамыз.",
-    "hero.fastPlaceholder":"WhatsApp нөмірі",
-    "hero.fastButton":"Мереке керек",
-    "hero.fastHint":"Спам жоқ. Тек нақты байланыс 😊",
+     "adv.list.1":"🎉13 жыл тәжірибе",
+     "adv.list.2":"🎭Дарынды аниматорлар",
+     "adv.list.3":"✨Түпнұсқа сценарийлер",
+     "adv.list.4":"👗Түсінікті костюмдер",
+     "adv.list.5":"🧼Таза реквизит",
+     "adv.list.6":"🛡️Қауіпсіз ойындар", 
+     "adv.list.7":"⏱️    Сенімді және уақытында",
 
     "trust.1.title":"Ұқыпты әрі қауіпсіз",
     "trust.1.text":"Қауіпсіз ойындар, таза әрі тексерілген реквизит.",
@@ -240,7 +212,6 @@ const I18N = {
     "services.1.text":"Куроми, Лабубу, ханшайымдар, супергеройлар және басқалар.",
     "services.4.title":"Аквагрим",
     "services.4.text":"Атмосфера, жақсы көңіл-күй, толық батыру.",
-
     "chars.title":"Кейіпкерлер",
     "chars.subtitle":"Кейіпкерді басыңыз — өтінімге автоматты қосылады.",
     "chars.filterAll":"Барлығы",
@@ -299,7 +270,7 @@ const I18N = {
     "port.note":"Кеңес: 6–12 нақты фото қоссаңыз — сенім бірден өседі.",
 
     "marq.1":"💎 Премиум стиль",
-    "marq.2":"🛡️ Қауіпсіз ойындар",
+    "marq.2":"🛡 Қауіпсіз ойындар",
     "marq.3":"🎭 Жасқа сай сценарий",
     "marq.4":"📸 Әдемі фото-сәттер",
     "marq.5":"⏱️ Уақыттылық",
@@ -314,25 +285,6 @@ const I18N = {
     "final.btn1":"Күнді брондау",
     "final.btn2":"Бағаны есептеу",
     "final.mini":"Тез жауап береміз. Кейіпкер мен форматты таңдауға көмектесеміз.",
-
-  
-    "calc.title":"Бағаны есептеу",
-    "calc.subtitle":"Жылдам бағалау — бюджетті түсіну үшін.",
-    "calc.kidsLabel":"Балалар саны",
-    "calc.timeLabel":"Ұзақтығы",
-    "calc.time30":"30 минут",
-    "calc.time60":"60 минут",
-    "calc.time90":"90 минут",
-    "calc.foam":"Көбік шоу (+4000 ₸)",
-    "calc.charLabel":"Кейіпкер",
-    "calc.char0":"Кейіпкерсіз",
-    "calc.char1":"Танымал кейіпкер (+3000 ₸)",
-    "calc.char2":"Премиум кейіпкер (+5000 ₸)",
-    "calc.btn":"Есептеу",
-    "calc.resultInit":"Барлығы: —",
-    "calc.toForm":"Өтінім қалдыру",
-    "calc.note":"*Нақты баға орынға, жасқа және сценарийге байланысты. Детальдарын хабарламада нақтылаймыз.",
-
     "reviews.title":"Ата-аналардың пікірі",
     "reviews.subtitle":"Шынайы жағдайлар: үйде, залда және үлкен мерекеде.",
     "reviews.r1.text":"«Эльза өте әсерлі болды! Балалар тыңдап, ойнап, күліп отырды. Ата-аналар дем алды 🙂»",
@@ -379,431 +331,55 @@ const I18N = {
     "mobile.secondary":"Есептеу",
   }
 };
-
-// ====== APPLY TRANSLATION TO ALL ELEMENTS ======
 function applyI18n(lang){
   const dict = I18N[lang] || I18N.ru;
+  document.documentElement.lang = lang;
 
-  // normal text
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key = el.getAttribute("data-i18n");
-    if(dict[key] != null) el.textContent = dict[key];
+  document.body.classList.add("lang-switching");
+
+  requestAnimationFrame(()=>{
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const key = el.dataset.i18n;
+      if(dict[key]) el.textContent = dict[key];
+    });
+
+    requestAnimationFrame(()=>{
+      document.body.classList.remove("lang-switching");
+    });
   });
+}
 
-  // placeholders
-  document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
-    const key = el.getAttribute("data-i18n-placeholder");
-    if(dict[key] != null) el.setAttribute("placeholder", dict[key]);
-  });
+/* =========================
+   SET LANGUAGE
+========================= */
+function setLang(lang){
+  applyI18n(lang);
 
-  // mark active
-  $("btnRU")?.classList.toggle("chip--active", lang === "ru");
-  $("btnKZ")?.classList.toggle("chip--active", lang === "kz");
+  const capsule = $("langCapsule");
+  capsule?.setAttribute("data-lang", lang);
 
-  // update initial calc text (if still untouched)
-  const res = $("result");
-  if(res && res.textContent.trim().includes("—")) {
-    res.textContent = dict["calc.resultInit"] || res.textContent;
-  }
-
-  // store
   localStorage.setItem("lang", lang);
 }
 
-function setLang(lang){
-  applyI18n(lang);
-}
+/* =========================
+   DOM READY
+========================= */
+document.addEventListener("DOMContentLoaded", ()=>{
+  const saved = localStorage.getItem("lang") || "ru";
+  setLang(saved);
 
-// ====== CALCULATOR ======
-function calculate(){
-  const kids = Math.max(1, parseInt(($("kids").value || "1"), 10));
-  const time = parseInt($("time").value, 10);
-  const foam = $("foam").checked ? 4000 : 0;
-  const character = parseInt($("character").value, 10);
+  $("btnRU")?.addEventListener("click", ()=>setLang("ru"));
+  $("btnKZ")?.addEventListener("click", ()=>setLang("kz"));
 
-  const kidsFee = kids * 500;
-  const total = time + foam + character + kidsFee;
-
-  const lang = localStorage.getItem("lang") || "ru";
-  const label = (lang === "kz") ? "Барлығы" : "Итого";
-  $("result").innerText = `${label}: ${total.toLocaleString("ru-RU")} ₸`;
-}
-
-// ====== FILTER CHARACTERS ======
-function filterChar(type, btn){
-  document.querySelectorAll(".charCard").forEach(card=>{
-    const ok = type === "all" || card.classList.contains(type);
-    card.style.display = ok ? "block" : "none";
-  });
-  document.querySelectorAll(".filters .chip").forEach(b=>b.classList.remove("chip--active"));
-  if(btn) btn.classList.add("chip--active");
-}
-
-// ====== CHOOSE CHARACTER -> add to comment, scroll to form ======
-function chooseCharacter(name){
-  const comment = $("comment");
-  const current = (comment.value || "").trim();
-  const lang = localStorage.getItem("lang") || "ru";
-  const prefix = (lang === "kz") ? "Кейіпкер" : "Персонаж";
-  const tag = `${prefix}: ${name}`;
-
-  if(!current.includes(tag)){
-    comment.value = current ? `${current}\n${tag}` : tag;
-  }
-  $("character").value = "3000";
-  document.querySelector("#form").scrollIntoView({ behavior: "smooth" });
-}
-
-// ====== PREFILL PACKAGE (language-safe keys) ======
-function prefillPackage(pkgKey){
-  const comment = $("comment");
-  const current = (comment.value || "").trim();
-  const lang = localStorage.getItem("lang") || "ru";
-
-  const map = {
-    MINI: { ru:"Мини", kz:"Мини" },
-    CLASSIC: { ru:"Классика", kz:"Классика" },
-    PREMIUM: { ru:"Премиум", kz:"Премиум" },
-  };
-
-  const label = (lang === "kz") ? "Пакет" : "Пакет";
-  const pkg = map[pkgKey]?.[lang] || map[pkgKey]?.ru || pkgKey;
-  const tag = `${label}: ${pkg}`;
-
-  if(!current.includes(tag)){
-    comment.value = current ? `${current}\n${tag}` : tag;
-  }
-}
-
-// ====== FORM SUBMIT (localStorage save) ======
-function sendForm(e){
-  e.preventDefault();
-
-  const order = {
-    city: "Аксу",
-    name: $("name").value.trim(),
-    phone: $("phone").value.trim(),
-    age: ($("age").value || "").trim(),
-    date: ($("date").value || "").trim(),
-    comment: ($("comment").value || "").trim(),
-    createdAt: new Date().toISOString()
-  };
-
-  const orders = JSON.parse(localStorage.getItem("orders") || "[]");
-  orders.push(order);
-  localStorage.setItem("orders", JSON.stringify(orders));
-
-  const lang = localStorage.getItem("lang") || "ru";
-  alert(lang === "kz" ? "Өтінім жіберілді! 😊" : "Заявка отправлена! 😊");
-
-  e.target.reset();
-}
-
-// ====== QUICK LEAD ======
-function quickLead(e){
-  e.preventDefault();
-  const phone = $("qPhone").value.trim();
-
-  const orders = JSON.parse(localStorage.getItem("orders") || "[]");
-  orders.push({
-    city: "Аксу",
-    name: "Quick lead",
-    phone,
-    age:"",
-    date:"",
-    comment:"",
-    createdAt: new Date().toISOString()
-  });
-  localStorage.setItem("orders", JSON.stringify(orders));
-
-  const lang = localStorage.getItem("lang") || "ru";
-  alert(lang === "kz" ? "Рахмет! WhatsApp-та жазамыз 😊" : "Спасибо! Напишем вам в WhatsApp 😊");
-
-  e.target.reset();
-}
-
-// ====== FAQ ======
-function toggleFaq(btn){
-  const body = btn.nextElementSibling;
-  const isOpen = body.style.display === "block";
-
-  document.querySelectorAll(".faqBody").forEach(b=>b.style.display="none");
-  document.querySelectorAll(".faqItem i").forEach(i=>i.textContent="+");
-
-  if(!isOpen){
-    body.style.display = "block";
-    const icon = btn.querySelector("i");
-    if(icon) icon.textContent = "–";
-  }
-}
-
-// ====== SCROLL REVEAL ======
-// ===== Smooth reveal + stagger =====
-(function initReveal(){
-  const revealEls = document.querySelectorAll(
-    ".section, .trustCard, .cardLux, .charCard, .charCardLux, .calc, .formLux, .review, .priceCard, .hero__card, .finalCta, .stepLux, .portItem"
-  );
-  revealEls.forEach(el => el.classList.add("reveal"));
-
-  // Stagger on grids (lux)
-  const grids = document.querySelectorAll(".grid3, .gridPricing, .gridChars, .gridChars--lux, .gridReviews, .trust__grid, .portGrid, .stepsLux");
-  grids.forEach(g => g.classList.add("stagger"));
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add("show");
-    });
-  }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
-
-  revealEls.forEach(el => io.observe(el));
-  grids.forEach(el => io.observe(el));
-})();
-
-// init language
-(function initLang(){
-  const saved = localStorage.getItem("lang");
-  setLang(saved === "kz" ? "kz" : "ru");
-})();
-// ===== Character preview modal =====
-function openCharPreview(name, imgSrc){
-  const modal = document.getElementById("charModal");
-  const title = document.getElementById("charModalTitle");
-  const img = document.getElementById("charModalImg");
-  const chooseBtn = document.getElementById("charModalChoose");
-
-  if(!modal || !title || !img || !chooseBtn) return;
-
-  title.textContent = name;
-  img.src = imgSrc;
-  img.alt = name;
-
-  chooseBtn.onclick = () => {
-    chooseCharacter(name);
-    closeCharPreview();
-  };
-
-  modal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
-}
-
-function closeCharPreview(){
-  const modal = document.getElementById("charModal");
-  if(!modal) return;
-  modal.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
-}
-
-document.addEventListener("keydown", (e)=>{
-  if(e.key === "Escape") closeCharPreview();
-});
-// ===== Portfolio modal =====
-function openPort(src){
-  const modal = document.getElementById("portModal");
-  const img = document.getElementById("portImg");
-  if(!modal || !img) return;
-
-  img.src = src;
-  img.alt = "Portfolio image";
-  modal.setAttribute("aria-hidden","false");
-  document.body.style.overflow = "hidden";
-}
-
-function closePort(){
-  const modal = document.getElementById("portModal");
-  if(!modal) return;
-
-  modal.setAttribute("aria-hidden","true");
-  document.body.style.overflow = "";
-}
-
-document.addEventListener("keydown", (e)=>{
-  if(e.key === "Escape") {
-    closePort();
-    // если есть и модалка персонажей — тоже закрываем
-    if(typeof closeCharPreview === "function") closeCharPreview();
-  }
-});
-function showToast(text){
-  const t = document.getElementById("toast");
-  if(!t) return;
-  t.textContent = text;
-  t.setAttribute("aria-hidden","false");
-  clearTimeout(window.__toastTimer);
-  window.__toastTimer = setTimeout(()=>t.setAttribute("aria-hidden","true"), 2200);
-}
-
-// Подключаем к выбору героя (добавь внутрь chooseCharacter в конце)
-(function hookToast(){
-  const _choose = window.chooseCharacter;
-  if(typeof _choose !== "function") return;
-
-  window.chooseCharacter = function(name){
-    _choose(name);
-    const lang = localStorage.getItem("lang") || "ru";
-    showToast(lang === "kz" ? `Таңдалды: ${name}` : `Вы выбрали: ${name}`);
-  };
-})();
-(function initShimmer(){
-  const hs = document.querySelectorAll(".shimmer");
-  if(!hs.length) return;
-
-  const io = new IntersectionObserver((entries)=>{
+  /* reveal animation */
+  const io = new IntersectionObserver(entries=>{
     entries.forEach(e=>{
-      if(e.isIntersecting) e.target.classList.add("show");
+      if(e.isIntersecting){
+        e.target.classList.add("show");
+        io.unobserve(e.target);
+      }
     });
-  }, { threshold: 0.6 });
+  }, { threshold: 0.15 });
 
-  hs.forEach(h=>io.observe(h));
-})();
-// ===== Auto-apply luxHover to all cards (no HTML edits) =====
-(function autoLuxHover(){
-  const selectors = [
-    ".trustCard",
-    ".cardLux",
-    ".priceCard",
-    ".charCard",
-    ".charCardLux",
-    ".review",
-    ".stepLux",
-    ".statCard",
-    ".portItem",
-    ".hero__card",
-    ".calc",
-    ".formLux",
-    ".finalCta"
-  ];
-
-  const els = document.querySelectorAll(selectors.join(","));
-  els.forEach(el => el.classList.add("luxHover"));
-
-  // Optional: also add glowCard spotlight automatically
-  const glowTargets = document.querySelectorAll([
-    ".trustCard", ".cardLux", ".priceCard", ".charCardLux", ".review", ".stepLux", ".statCard", ".portItem"
-  ].join(","));
-  glowTargets.forEach(el => el.classList.add("glowCard"));
-})();
-// ===== 3D tilt only on desktop (nice + safe) =====
-(function initTiltDesktop(){
-  const isTouch = window.matchMedia("(pointer: coarse)").matches;
-  if(isTouch) return;
-
-  const cards = document.querySelectorAll(".luxHover");
-  const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
-
-  cards.forEach(card=>{
-    card.addEventListener("mousemove", (e)=>{
-      const r = card.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width;
-      const py = (e.clientY - r.top) / r.height;
-
-      const rx = clamp((0.5 - py) * 7, -5, 5);
-      const ry = clamp((px - 0.5) * 9, -7, 7);
-
-      card.style.transform =
-        `translateY(-6px) scale(1.01) perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-    });
-
-    card.addEventListener("mouseleave", ()=>{
-      card.style.transform = "";
-    });
-  });
-})();
-// ===== Auto placeholder + blur-up load for images =====
-(function autoImgEnhance(){
-  // какие картинки улучшаем (персонажи + портфолио; добавь селекторы при желании)
-  const targets = document.querySelectorAll(
-    "#characters img, #portfolio img, .charMedia img, .portItem img"
-  );
-
-  if(!targets.length) return;
-
-  // SVG-заглушка с именем (подставляем текст из alt или data-name)
-  function makePlaceholder(label){
-    const safe = (label || "Фото").toString().slice(0, 28);
-    const svg =
-`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200">
-  <defs>
-    <radialGradient id="g1" cx="20%" cy="10%" r="70%">
-      <stop offset="0%" stop-color="rgba(255,77,109,0.55)"/>
-      <stop offset="60%" stop-color="rgba(255,77,109,0)"/>
-    </radialGradient>
-    <radialGradient id="g2" cx="85%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="rgba(124,58,237,0.55)"/>
-      <stop offset="60%" stop-color="rgba(124,58,237,0)"/>
-    </radialGradient>
-  </defs>
-
-  <rect width="100%" height="100%" fill="#0b0f1a"/>
-  <rect width="100%" height="100%" fill="url(#g1)"/>
-  <rect width="100%" height="100%" fill="url(#g2)"/>
-  <rect x="60" y="60" width="1080" height="1080" rx="120" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
-
-  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
-        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
-        font-size="64" fill="rgba(255,255,255,0.92)" font-weight="800">
-    ${escapeXml(safe)}
-  </text>
-  <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle"
-        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
-        font-size="34" fill="rgba(255,255,255,0.70)">
-    Нет фото — добавьте в assets
-  </text>
-</svg>`;
-
-    // data:image/svg+xml URI
-    return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
-  }
-
-  function escapeXml(str){
-    return str.replace(/[<>&'"]/g, s => ({
-      "<":"&lt;", ">":"&gt;", "&":"&amp;", "'":"&apos;", "\"":"&quot;"
-    }[s]));
-  }
-
-  function setLoaded(img){
-    img.classList.remove("imgBlur");
-    img.classList.add("imgSharp");
-  }
-
-  function setLoading(img){
-    img.classList.add("imgBlur");
-    img.classList.remove("imgSharp");
-  }
-
-  function setFallback(img){
-    const label = img.getAttribute("alt") || img.dataset.name || "Фото";
-    img.classList.add("imgFallback");
-    img.src = makePlaceholder(label);
-    // заглушка сразу “резкая”
-    img.classList.remove("imgBlur");
-    img.classList.add("imgSharp");
-  }
-
-  targets.forEach(img => {
-    // добавим ленивую загрузку, если не указано
-    if(!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
-    img.setAttribute("decoding", "async");
-
-    // если src пустой — сразу заглушка
-    const src = (img.getAttribute("src") || "").trim();
-    if(!src){
-      setFallback(img);
-      return;
-    }
-
-    // делаем blur пока грузится
-    setLoading(img);
-
-    // если уже загружено из кэша
-    if(img.complete && img.naturalWidth > 0){
-      setLoaded(img);
-    }
-
-    img.addEventListener("load", () => setLoaded(img), { once: true });
-
-    img.addEventListener("error", () => {
-      // если файл не найден / ошибка — ставим заглушку
-      setFallback(img);
-    }, { once: true });
-  });
-})();
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+});
