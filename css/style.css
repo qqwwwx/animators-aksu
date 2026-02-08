@@ -1380,6 +1380,57 @@ main, section { width: 100%; max-width: none !important; }
   transform: translateY(4px);
 }
 /* =========================
+ /* ===== Language toggle pill ===== */
+.langToggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 88px;
+  height: 36px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(8px);
+}
+
+.langToggle__btn {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.langToggle__thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 999px;
+  background: #fff;
+  transition: transform .35s cubic-bezier(.4,0,.2,1);
+}
+
+.langToggle[data-lang="kz"] .langToggle__thumb {
+  transform: translateX(100%);
+}
+
+.langToggle[data-lang="ru"] .langToggle__thumb {
+  transform: translateX(0);
+}
+
+.langToggle[data-lang="ru"] #btnRU,
+.langToggle[data-lang="kz"] #btnKZ {
+  color: #000;
+}
+/* =========================
    Language capsule (site colors)
 ========================= */
 .langCapsule{
@@ -1463,3 +1514,4 @@ main, section { width: 100%; max-width: none !important; }
     0 0 0 4px rgba(199,125,255,.08),
     0 12px 28px rgba(0,0,0,.45);
 }
+

@@ -29,11 +29,12 @@
         <a href="#form" data-i18n="nav.form">Заявка</a>
       </nav>
 
-      <div class="langSwitch">
-        <button id="btnRU" class="chip chip--active" data-lang="ru" onclick="setLanguage('ru')">RU</button>
-        <button id="btnKZ" class="chip" data-lang="kz" onclick="setLanguage('kz')">KZ</button>
-      </div>
-    </div>
+     <div class="langCapsule" id="langCapsule" data-lang="ru">
+  <span class="langCapsule__thumb"></span>
+  <button id="btnRU" class="langCapsule__btn">RU</button>
+  <button id="btnKZ" class="langCapsule__btn">KZ</button>
+</div>
+
   </header>
 
   <main>
@@ -877,11 +878,6 @@
 
 
 
-<div class="toast" id="toast" aria-hidden="true"></div>
-</body>
-</html>
-
-
-  <!-- остальной HTML без изменений (сохраняется как в оригинале) -->
+<script src="js/main.js"></script>
 </body>
 </html>
