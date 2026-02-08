@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
@@ -29,9 +29,9 @@
         <a href="#form" data-i18n="nav.form">Заявка</a>
       </nav>
 
-      <div class="lang">
-        <button class="chip chip--active" id="btnRU" onclick="setLang('ru')">RU</button>
-        <button class="chip" id="btnKZ" onclick="setLang('kz')">KZ</button>
+      <div class="langSwitch">
+        <button id="btnRU" class="chip chip--active" data-lang="ru" onclick="setLanguage('ru')">RU</button>
+        <button id="btnKZ" class="chip" data-lang="kz" onclick="setLanguage('kz')">KZ</button>
       </div>
     </div>
   </header>
@@ -52,14 +52,16 @@
           </div>
 
           <div class="advantagesGrid">
-          <div class="advantage">13 лет опыта</div>
-<div class="advantage">Талантливые аниматоры</div>
-<div class="advantage">Оригинальные сценарии</div>
-<div class="advantage">Красочные костюмы</div>
-<div class="advantage">Чистый реквизит</div>
-<div class="advantage">Безопасные игры</div>
-<div class="advantage">Надёжно и вовремя</div>
-          </div>
+  <div class="advantage" data-i18n="adv.list.1">13 лет опыта</div>
+  <div class="advantage" data-i18n="adv.list.2">Талантливые аниматоры</div>
+  <div class="advantage" data-i18n="adv.list.3">Оригинальные сценарии</div>
+  <div class="advantage" data-i18n="adv.list.4">Красочные костюмы</div>
+  <div class="advantage" data-i18n="adv.list.5">Чистый реквизит</div>
+  <div class="advantage" data-i18n="adv.list.6">Безопасные игры</div>
+  <div class="advantage" data-i18n="adv.list.7">Надёжно и вовремя</div>
+</div>
+
+</div>
 
            <div class="miniStats">
             <div class="miniStat">
@@ -77,8 +79,7 @@
           </div>
         </div>
 
-
-    <!-- TRUST -->
+<!-- TRUST -->
     <section class="trust">
       <div class="container trust__grid">
         <div class="trustCard">
@@ -877,5 +878,10 @@
 
 
 <div class="toast" id="toast" aria-hidden="true"></div>
+</body>
+</html>
+
+
+  <!-- остальной HTML без изменений (сохраняется как в оригинале) -->
 </body>
 </html>
